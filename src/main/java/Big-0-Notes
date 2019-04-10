@@ -1,0 +1,62 @@
+for (int i = 1; i <= n;  i *= 2) {
+    for (int j = 0; j < i; j++) {
+        // Statement(s) that take(s) constant time
+   }
+}
+
+
+
+while(var < n) {
+ System.out.println("Pie: " + pie);
+			//O(?)
+	for (int j = 0; j <= var; j++) {
+		sum++;
+	}
+   var*=2;
+} //end of while loop
+
+
+
+outer loop - logn
+inner loop - n
+
+combined    -  O(nlog(n))
+
+
+===========================================
+
+for (int var = 1; var < n; var += 3) {  // O(?)
+      System.out.println("Pie: " + pie); //O(?)
+      while (j < n) {    // O(?)
+        sum += 1;
+        j *= 3;
+      }
+    }
+
+
+for (int var = 0; var < n; var++) { //O(n)
+			System.out.println("Pie: "+ pie); //O(1)
+			while(j < var) {
+        sum += 1; //O(1)
+        j *= 2;   //O(1)
+      }
+    } //end of
+
+
+inner loop - logn
+outer loop - n
+
+combined    -  O(nlog(n))
+
+===========================================
+
+while (i < n) {
+    i *= k
+    // Statement(s) that take(s) constant time
+}
+
+O(log(n))
+
+===============================================
+
+

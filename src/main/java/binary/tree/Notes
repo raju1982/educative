@@ -1,0 +1,6 @@
+Binary search tree -
+extremely fast lookup of specific value and insertion of new node
+
+tree to array ->
+ in-order traversal on the tree to get a sorted array which is in ascending order.
+ use String builder -> stringbuilder.tostring.split -> ascending order array

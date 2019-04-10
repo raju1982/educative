@@ -1,0 +1,20 @@
+left child 2n+1
+right child 2n+2
+parent (i-1)/2
+
+represent heap as a index of array
+
+adding new element to heap -> adding new element as leaf (very end) -> shiftup
+remove the hight priority element -> assign 0 index value to lowest element (count) -> reduce count by one count-- -> shift down
+
+
+THE BINARY HEAP
+INSERTION	INSERTING A NEW ELEMENT - COMPLEXITY O(LG N)
+ACCESS 		ACCESSING THE HIGHEST PRIORITY ELEMENT IS FAST - O(1)
+REMOVE		REMOVING THE HIGHEST PRIORITY ELEMENT IS O(LG N)
+Sort        O(NlogN)
+Search      O(N)
+
+heap sort is notn adaptive(cannot break put for nearly sorted array.) and stable.
+
+heap tree must be a complete biunary tree.

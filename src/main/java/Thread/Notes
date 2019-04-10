@@ -1,0 +1,44 @@
+Every program runs in it's own process.
+Process can spawn off multiple threads.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Synchronization avoids memory consistence errors caused due to inconsistent view of shared memory.
+
+Race condition in Java occurs in a multi-threaded environment when more than one thread try to access modify a shared resource at the same time.
+
+
+Deadlock in multi-threading describes a situation where two or more threads are blocked forever, waiting for each other.
+
+
+
+Livelock in Java multi-threading is a situation where two or more threads are acting on a response to an action of each other and not able to make any progress because of that.
+
+How livelock is different from deadlock in Java multi-threading is that in case of deadlock threads get blocked whereas in case of livelock threads are active but busy responding to each other thus not making any progress.
+
+
+
+In any multi-threaded application, where you have multiple threads vying for the access over the shared resources you may come across a situation where a thread (or a bunch of threads) is unable to gain regular access to shared resources and is unable to make progress. This situation is known as thread starvation.
+
+Thread starvation in multi-threading may happen because other “greedy” threads are gaining the lock and access to the shared resource, resulting in a thread (or a bunch of threads) getting starved of access to shared resources and CPU time
+
+
+Volatile variables reduces the risk of memory consistency errors
+
+A multi-threaded application running on multi-processor may have different threads running on different processors. Also, note that shared field (a variable shared among many threads) will be stored in main memory, but as we know now, due to the caching by the processors even the shared field will have different copies in the cache of different processors.
+
+
