@@ -2,3 +2,5 @@ Functional interface is an interface with only one abstract method in it.
 Lambda expression is always of functional interface type.
 Lambda expression is block of code used to implement a method defined in by a functional interface.
 Lambda allows us to disassociate a set of instruction (non associated function or block of code) from an object.
+
+

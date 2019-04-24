@@ -14,7 +14,7 @@ import java.util.HashSet;
 
 public class Test {
 
-
+/*
     public static boolean can_segment_string(String s, Set<String> dict, Set<String> solved) {
         for (int i = 1; i <= s.length(); ++i) {
             String first = s.substring(0, i);
@@ -89,9 +89,60 @@ public class Test {
 
         return true;
     }
+*/
+
+    public static int binarySearch(String[] input, int start, int end, String searchParam){
+        if(start>end){
+            return -1;
+        }
+
+        int mid = start + (end-start)/2;
+
+        String midValue = input[mid].trim();
+
+        if(midValue.length() == 0){
+            int i = mid-1;
+            int j = mid+1;
+
+            while(true){
+                if(i<start && j>end){
+                    return -1;
+                }
+                if(i>=start && input[i].trim().length() != 0){
+                    mid = i;
+                    break;
+                }
+                if(j<=end && input[j].trim().length() != 0){
+                    mid = j;
+                    break;
+                }
+                i--;
+                j++;
+            }
+        }
+        midValue = input[mid].trim();
+        int tmp = midValue.compareTo(searchParam);
+
+        if(tmp == 0){
+            return mid;
+        }
+        else if(tmp>0){
+            return binarySearch(input, start, mid-1, searchParam);
+        }
+        else{
+            return binarySearch(input, mid+1, end, searchParam);
+        }
+    }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
+        String[] input = new String[]{"at", "ball", "", "car", "", "dad", "", "","eight", "","","","high"};
+        System.out.println(binarySearch(input, 0, input.length, "eight"));
+        System.out.println(binarySearch(input, 0, input.length, "dime"));
+    }
+
+
+    //public static void main(String[] args) {
         /*Set<String> dict = new HashSet<String>();
         String s = new String();
         s = "applepie";
@@ -120,9 +171,9 @@ public class Test {
         //System.out.println(breakWord(str.toCharArray(),0,dictionary));
         //System.out.println(breakWord(s.toCharArray(),0,dict));
 
-        System.out.println(match ("aabbbbbcdda", "aabbbbbcdda"));
-        System.out.println(match ("aabbbbbcdda", "aabb.bb.dda"));
-    }
+        //System.out.println(match ("aabbbbbcdda", "aabbbbbcdda"));
+        //System.out.println(match ("aabbbbbcdda", "aabb.bb.dda"));
+    //}
 
 
 }

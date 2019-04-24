@@ -1,0 +1,8 @@
+left child 2n+1
+right child 2n+2
+parent (i-1)/2
+
+represent heap as a index of array
+
+adding new element to heap -> adding new element as leaf (very end) -> shiftup
+remove the hight priority element -> assign 0 index value to lowest element (count) -> reduce count by one count-- -> shift down

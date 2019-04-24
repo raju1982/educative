@@ -35,7 +35,7 @@ public class Question {
 		for (int a : array) {
 			System.out.println(search(list, a));
 		}
-		System.out.println(search(list, 15));
+		System.out.println(search(list, 16));
 	}
 
 }
