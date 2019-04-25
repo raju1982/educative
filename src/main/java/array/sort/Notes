@@ -18,3 +18,5 @@ Search      O(N)
 heap sort is not adaptive(cannot break put for nearly sorted array.) and stable.
 
 heap tree must be a complete binary tree.
+
+====================================================================

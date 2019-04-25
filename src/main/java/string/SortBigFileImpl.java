@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.FileWriter;
-import static string.QuickSort.QuicksortString;
+import static string.sorting.QuickSort.QuicksortString;
 
 public class SortBigFileImpl {
 

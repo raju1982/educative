@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 import java.util.Stack;
 import java.util.Map;
@@ -134,13 +135,63 @@ public class Test {
         }
     }
 
+    public static String[] topKwords(String input, int size){
+        String[] data = input.split(" ");
 
+        Map<String, Integer> countMap = new HashMap<>();
+
+        for(int i=0; i<data.length; i++){
+            if(countMap.containsKey(data[i])){
+                countMap.put(data[i], countMap.get(data[i]) + 1);
+            }
+            else{
+                countMap.put(data[i], 1);
+            }
+        }
+
+        PriorityQueue<Integer> pQueue = new PriorityQueue<>(size);
+
+        for(Map.Entry<String, Integer> tmp : countMap.entrySet()){
+
+            int val = tmp.getValue();
+
+            if(pQueue.size()<size){
+                pQueue.offer(val);
+            }
+            else{
+                if(val > pQueue.peek()){
+                    pQueue.poll();
+                    pQueue.offer(val);
+                }
+            }
+        }
+
+        String[] solution = new String[size];
+        int i = 0;
+
+        for(Map.Entry<String, Integer> tmp : countMap.entrySet()){
+            if(pQueue.contains(tmp.getValue())){
+                solution[i++] = tmp.getKey();
+            }
+        }
+
+        return solution;
+    }
+
+
+    public static void main(String[] args){
+        String str = "hi this is new way to hi ui is new from is this new hi is";
+        String[] solution = topKwords(str, 3);
+        System.out.println(Arrays.toString(solution));
+    }
+
+/*
     public static void main(String[] args){
         String[] input = new String[]{"at", "ball", "", "car", "", "dad", "", "","eight", "","","","high"};
         System.out.println(binarySearch(input, 0, input.length, "eight"));
         System.out.println(binarySearch(input, 0, input.length, "dime"));
     }
-
+*/
 
     //public static void main(String[] args) {
         /*Set<String> dict = new HashSet<String>();
