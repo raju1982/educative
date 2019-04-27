@@ -1,9 +1,0 @@
-Classes to support functional-style operations on streams of elements -
-
-Stream operations are divided into intermediate and terminal operations, and are combined to form stream pipelines.
-A stream pipeline consists of a source (such as a Collection, an array, a generator function, or an I/O channel); followed by zero or more intermediate operations such as Stream.filter or Stream.map; and a terminal operation such as Stream.forEach or Stream.reduce.
-
-Intermediate operations return a new stream.
-
-Terminal operations, such as Stream.forEach or IntStream.sum, may traverse the stream to produce a result or a side-effect. After the terminal operation is performed, the stream pipeline is considered consumed, and can no longer be used.
-
