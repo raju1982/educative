@@ -20,9 +20,10 @@ public class QuickSort {
                 h--;
             }
 
-            if (l < h) {
+            if(l<h) {
                 swap(input, l, h);
             }
+
         }
 
         swap(input, h, low);

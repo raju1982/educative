@@ -24,6 +24,8 @@ public class FindTheRunningMedian {
         }
     }
 
+    //biggest element from lower half + smallest element from upper half. [if two values are in middle]
+    //elemnt from bigger queue (if single element in middle)
     public static double getMedian(PriorityQueue<Integer> lowers, PriorityQueue<Integer> highers){
         PriorityQueue<Integer> biggerHeap = lowers.size() > highers.size() ? lowers : highers;
         PriorityQueue<Integer> smallerHeap = lowers.size() > highers.size() ? highers : lowers;
@@ -36,6 +38,8 @@ public class FindTheRunningMedian {
         }
     }
 
+    //min queue in upper half
+    //max queue in lower half
     public static double[] getMedians(int[] array){
         PriorityQueue<Integer> lowers = new PriorityQueue<Integer>(new MedianComparator());
         PriorityQueue<Integer> highers = new PriorityQueue<Integer>();

@@ -2,35 +2,6 @@ package array.search;
 
 public class SearchElementInASortedMatrix {
 
-    // JAVA Code for Search in a row wise and
-// column wise sorted matrix
-
-    /* Searches the element x in mat[][]. If the
-    element is found, then prints its position
-    and returns true, otherwise prints "not found"
-    and returns false */
-    private static void search(int[][] mat, int n, int x) {
-
-        int i = 0, j = n - 1; //set indexes for top right
-        // element
-
-        while (i < n && j >= 0) {
-            if (mat[i][j] == x) {
-                System.out.println("n Found at " + i + " " + j);
-                return;
-            }
-            if (mat[i][j] > x)
-                j--;
-            else // if mat[i][j] < x
-                i++;
-        }
-
-        System.out.println("n Element not found");
-        return; // if ( i==n || j== -1 )
-
-    }
-
-
     public static boolean binarySearchMatrix(int[][] matrix, int target) {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0)
             return false;

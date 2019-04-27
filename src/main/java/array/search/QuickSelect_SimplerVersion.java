@@ -49,8 +49,9 @@ public class QuickSelect_SimplerVersion {
     }
 
     public static void main(String[] args){
-        int[] data = new int[]{2,4,12,7,3,9,10};
+        //int[] data = new int[]{2,4,12,7,3,9,10};
+        int[] data = new int[] {5,1,7,12,9,3,23,11,13};
         //kith largest element is equivalent to find (n - k)th smallest element in array.
-        System.out.println(quicksort(data, 0, data.length-1,data.length - 4));
+        System.out.println(quicksort(data, 0, data.length-1,data.length - 3));
     }
 }
