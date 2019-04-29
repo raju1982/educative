@@ -5,52 +5,37 @@ import java.util.List;
 
 public class RotateArrayGeneric {
 
-    public static void rotateArray(List<Integer> input, int rotateNum){
-        int size = input.size();
-        rotateNum=rotateNum%size;
-        if(rotateNum<0){
-            rotateNum = rotateNum+size;
+    public static void rotate(int[] input, int num){
+        //input = null -> throw new IllegalArguentException();
+        int len = input.length;
+        if(num<0){
+            num = num + input.length;
         }
 
-        swapNUmberfromBothends(input, 0, size-1);
-        swapNUmberfromBothends(input, rotateNum, size-1);
-        swapNUmberfromBothends(input, 0, rotateNum-1);
+        num = num%input.length;
+
+        rotate(input, 0, input.length-1);
+        rotate(input, 0, num-1);
+        rotate(input, num, input.length-1);
     }
 
-    public static void swapNUmberfromBothends(List<Integer> input, int min, int max){
-
+    public static void rotate(int[] input, int min, int max){
         while(min<max){
-            int tmp=input.get(min);
-            input.set(min, input.get(max));
-            input.set(max, tmp);
+            swap(min, max, input);
             min++;
             max--;
         }
-
     }
 
-    //easy solution
-    public static void RightRotateArrayByOneIndex(int[] input){
-        int tmp = input[0];
-        for(int i=1; i<input.length; i++){
-            input[i-1]=input[i];
-        }
-        input[input.length-1] = tmp;
-    }
-
-    public static void genericRotate(int[] input, int num){
-        if(num < 0){
-            num = num + input.length;
-        }
-        for(int i=1; i<=num; i++){
-            RightRotateArrayByOneIndex(input);
-        }
+    public static void swap(int i, int j , int[] input){
+        int tmp = input[i];
+        input[i] = input[j];
+        input[j] =  tmp;
     }
 
     public static void main(String[] args){
-        List<Integer> v1 = Arrays.asList(1, 2, 3, 4, 5);
-        rotateArray(v1,3);
-
-        System.out.println(Arrays.toString(v1.toArray()));
+        int[] input = new int[]{1,2,3,4,5,6};
+        rotate(input, 11);
+        System.out.println(Arrays.toString(input));
     }
 }

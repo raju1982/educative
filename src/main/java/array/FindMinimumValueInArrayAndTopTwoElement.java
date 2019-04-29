@@ -1,10 +1,12 @@
 package array;
 
+import java.util.Arrays;
+
 public class FindMinimumValueInArrayAndTopTwoElement {
 
     public static void main(String[] args){
         System.out.println(solution(new int[] {9,2,3,6}));
-        System.out.println(topTwoInArray(new int[] {9,2,3,6}));
+        System.out.println(Arrays.toString(topTwoValues(new int[] {9,2,3,6})));
     }
 
     public static int solution(int[] input){
@@ -17,20 +19,23 @@ public class FindMinimumValueInArrayAndTopTwoElement {
         return answer;
     }
 
-    public static int topTwoInArray(int[] input){
-        int highest = input[0];
-        int secondHighest = input[0];
-
+    public static int[] topTwoValues(int[] input){
+        //IllegalArgumentException -> null ||  input.length < 2
+        int max = input[0];
+        int secondMax = 0;
         for(int i=1; i<input.length; i++){
-            if(input[i] > highest){
-                secondHighest = highest;
-                highest = input[i];
+            if(max<=input[i]){
+                max=input[i];
             }
-            else if(input[i] > secondHighest){
-                secondHighest = input[i];
+            else if(secondMax<input[i]){
+                secondMax=input[i];
             }
         }
-        return secondHighest;
+        int[] result = new int[2];
+        result[0]=max;
+        result[1]=secondMax;
+
+        return result;
     }
 
 
