@@ -87,7 +87,7 @@ public class MinimumDistanceBetweenWordsOfAString {
                 bIndex=i;
             }
             if(aIndex!=-1 && bIndex!=-1){
-                minDistance= minDistance > Math.abs(bIndex-aIndex) ? bIndex-aIndex : minDistance;
+                minDistance = minDistance > Math.abs(bIndex-aIndex) ? bIndex-aIndex : minDistance;
             }
             i++;
         }

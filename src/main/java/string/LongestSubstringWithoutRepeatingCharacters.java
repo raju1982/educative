@@ -8,27 +8,32 @@ public class LongestSubstringWithoutRepeatingCharacters {
     //the longest non-repeating substring output
     //a lookup table of already visited characters
     static String getUniqueCharacterSubstring(String input) {
+        //character & last index on which it was present
         Map<Character, Integer> visited = new HashMap<>();
         String output = "";
         for (int start = 0, end = 0; end < input.length(); end++) {
             char currChar = input.charAt(end);
+            //if character is present, then start will change
+            //start will be last index + 1
             if (visited.containsKey(currChar)) {
-                System.out.println(visited.get(currChar)+1);
-                System.out.println(start);
                 start = Math.max(visited.get(currChar)+1, start);
             }
+            //always store the max length substring
             if (output.length() < end - start + 1) {
                 output = input.substring(start, end + 1);
             }
+            //store last index
             visited.put(currChar, end);
         }
         return output;
     }
 
+
+
     public static void main(String[] args){
-        System.out.println(getUniqueCharacterSubstring("pwwkew"));
+        //System.out.println(getUniqueCharacterSubstring("pwwkew"));
         System.out.println(getUniqueCharacterSubstring("abcabcbb"));
-        System.out.println(getUniqueCharacterSubstring("bbbbb"));
+        //System.out.println(getUniqueCharacterSubstring("bbbbb"));
     }
 }
 

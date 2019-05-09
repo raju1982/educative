@@ -33,49 +33,7 @@ public class oneEditAway {
     }
 
 
-    public static boolean oneEditDistance(String inputA, String inputB) {
 
-        int lengthA = inputA.length();
-        int lengthB = inputB.length();
-
-        if (Math.abs(lengthA - lengthB) > 1) {
-            return false;
-        }
-
-        int[] data = new int[26];
-        int i = 0, j = 0;
-
-        for (; i < lengthA && j < lengthB; i++, j++) {
-            data[inputA.charAt(i) - 97]++;
-            data[inputB.charAt(j) - 97]--;
-        }
-
-        if (i < lengthA - 1) {
-            data[inputA.charAt(i) - 97]++;
-        }
-
-        if (j < lengthB - 1) {
-            data[inputB.charAt(j) - 97]--;
-        }
-
-        int count = 0;
-        for (int k = 0; k < data.length; k++) {
-            if (data[k] != 0) {
-                count++;
-            }
-        }
-
-        if (count == 2 && (lengthA - lengthB) == 0) {
-            return true;
-        }
-
-        if (count == 1 && Math.abs(lengthA - lengthB) == 1) {
-            return true;
-        }
-
-        return false;
-
-    }
 
     public static void main(String[] args) {
         String[][] tests = {
@@ -93,8 +51,9 @@ public class oneEditAway {
                 {"pale", "pkle"},
                 {"pkle", "pable"}};
 
-        System.out.println(oneEditDistance("pale", "pkle"));
-        System.out.println(oneEditDistance("pkle", "pable"));
+        System.out.println(oneEditDistance2("pale", "pkle"));
+        //System.out.println(oneEditDistance2("pkle", "pable"));
+        System.out.println(oneEditDistance2("pkle", "pckle"));
     }
 
 }

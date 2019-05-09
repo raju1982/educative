@@ -10,6 +10,8 @@ public class AreSameStringButRotated {
     }
 
     public static boolean isRotation(String s1, String s2) {
+        //null check
+        //empty length check
         int len = s1.length();
 	    /* check that s1 and s2 are equal length and not empty */
         if (len == s2.length() && len > 0) {

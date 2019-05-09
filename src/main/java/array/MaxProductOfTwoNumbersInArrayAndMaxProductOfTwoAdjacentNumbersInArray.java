@@ -1,5 +1,7 @@
 package array;
 
+import java.util.Arrays;
+
 public class MaxProductOfTwoNumbersInArrayAndMaxProductOfTwoAdjacentNumbersInArray {
     public static int MaxProductOfTwoAdjacentNumbersInArray(int[] input){
         //null ->
@@ -15,23 +17,12 @@ public class MaxProductOfTwoNumbersInArrayAndMaxProductOfTwoAdjacentNumbersInArr
     }
 
     public static int MaxProductOfTwoNumbersInArray(int[] input){
-        //null ->
-        //length < 2
-
-        int max1 = input[0];
-        int max2 = input[1];
-
-        for(int i=2; i<input.length; i++){
-            if(input[i]>max1){
-                max2=max1;
-                max1=input[i];
-            }
-            else if(input[i]>max2){
-                max2=input[i];
-            }
-        }
-
-        return max1*max2;
+        //IllegalArgumentException -> null ||  input.length < 2
+        Arrays.sort(input);
+        int[] result = new int[2];
+        result[0]=input[input.length-1];
+        result[1]=input[input.length-2];
+        return result[0]*result[1];
     }
 
     public static void main(String[] args){

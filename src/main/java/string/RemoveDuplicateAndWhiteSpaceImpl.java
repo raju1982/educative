@@ -47,7 +47,29 @@ public class RemoveDuplicateAndWhiteSpaceImpl {
         return result.toString();
     }
 
+
+    //best answer
+    public static String removeWhiteSpaceAndDuplicate(String test){
+        test = test.replaceAll("[ \t]+", "");
+        System.out.println(test);
+
+        Set<Character> tmp = new HashSet<>();
+        StringBuilder result = new StringBuilder();
+
+        for(int i=0; i<test.length(); i++){
+            char data = test.charAt(i);
+            if(!tmp.contains(data)){
+                result.append(data);
+                tmp.add(data);
+            }
+        }
+        return result.toString();
+    }
+
     public static void main(String[] args){
+        String test = " qcv sde rty uiuio ui";
+        System.out.println(removeWhiteSpaceAndDuplicate(test));
+
         System.out.println(removeDuplicate("rakesh"));
         System.out.println(removeDuplicate("rakesh kandpal"));
 

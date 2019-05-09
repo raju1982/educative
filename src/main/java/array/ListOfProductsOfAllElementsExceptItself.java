@@ -42,38 +42,34 @@ public class ListOfProductsOfAllElementsExceptItself {
     }
 
     //another solution
-    public static int[] ListOfSumOfAllElementsExceptItself(int[] input){
+    public static int[] listOfSumOfAllElementsExceptItself2(int[] input){
         int[] leftArray = new int[input.length];
-        int[] rightArray = new int[input.length];
-        int[] result = new int[input.length];
 
         int sum=1;
-        leftArray[0] = sum;
-        for(int i=1; i<leftArray.length; i++){
-            sum = input[i-1] * sum;
+        for(int i=0; i<leftArray.length; i++){
             leftArray[i] = sum;
+            sum = input[i] * sum;
         }
 
         sum=1;
-        rightArray[rightArray.length-1] = sum;
-        for(int i=rightArray.length-2; i>=0; i--){
-            sum = input[i+1] * sum;
-            rightArray[i] = sum;
+        for(int i=leftArray.length-1; i>=0; i--){
+            leftArray[i] = leftArray[i]*sum;
+            sum = input[i] * sum;
         }
-
-        for(int i=0; i<rightArray.length; i++){
-            result[i] = leftArray[i] * rightArray[i];
-        }
-
-        return result;
+        return leftArray;
     }
 
     @Test
     public void test(){
         int[] input = new int[]{4,7,2,9,12,10,3};
-        findProduct(input);
-        //System.out.println(Arrays.toString(input));
+        //findProduct(input);
+        System.out.println(Arrays.toString(listOfSumOfAllElementsExceptItself2(input)));
         //assertEquals(productImpl(input), {});
     }
 
 }
+
+//45360 25920 90720 20160 15120 18144 60480
+//[45360, 25920, 90720, 20160, 15120, 18144, 60480]
+//[45360, 25920, 90720, 20160, 15120, 18144, 60480]
+//[45360, 25920, 90720, 20160, 15120, 18144, 60480]

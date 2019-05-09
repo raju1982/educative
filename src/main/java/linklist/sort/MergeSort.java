@@ -91,7 +91,7 @@ public class MergeSort
         return slowptr;
     }
 
-    void push(int new_data)
+    void pushAtFront(int new_data)
     {
 		/* allocate node */
         node new_node = new node(new_data);
@@ -121,12 +121,12 @@ public class MergeSort
 		* Let us create a unsorted linked lists to test the functions Created
 		* lists shall be a: 2->3->20->5->10->15
 		*/
-        li.push(15);
-        li.push(10);
-        li.push(5);
-        li.push(20);
-        li.push(3);
-        li.push(2);
+        li.pushAtFront(15);
+        li.pushAtFront(10);
+        li.pushAtFront(5);
+        li.pushAtFront(20);
+        li.pushAtFront(3);
+        li.pushAtFront(2);
         System.out.println("Linked List without sorting is :");
         li.printList(li.head);
 

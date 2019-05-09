@@ -1,67 +1,59 @@
 package string;
 
-        import java.util.Map;
-        import java.util.TreeMap;
 
-/**
- * Date 01/29/2016
- * @author Tushar Roy
- *
- * Generate all permutations of string in lexicographically sorted order where repetitions of
- * character is possible in string.
- */
-public class StringPermutation {
-
-    public void permute(char input[]) {
-        //map of character count.
-        Map<Character, Integer> countMap = new TreeMap<>();
-        for (char ch : input) {
-            countMap.compute(ch, (key, val) -> {
-                if (val == null) {
-                    return 1;
-                } else {
-                    return val + 1;
-                }
-            });
-        }
-        char str[] = new char[countMap.size()];
-        int count[] = new int[countMap.size()];
-        int index = 0;
-        for (Map.Entry<Character, Integer> entry : countMap.entrySet()) {
-            str[index] = entry.getKey();
-            count[index] = entry.getValue();
-            index++;
-        }
-        char result[] = new char[input.length];
-        permuteUtil(str, count, result, 0);
+// Java program to print all permutations of a
+// given string.
+public class StringPermutation
+{
+    public static void main(String[] args)
+    {
+        String str = "ABC";
+        int n = str.length();
+        permute(str, 0, n-1);
     }
 
-    public void permuteUtil(char str[], int count[], char result[], int recursionDepth) {
-        if (recursionDepth == result.length) {
-            printArray(result);
-            return;
-        }
-
-        for(int i = 0; i < str.length; i++) {
-            if(count[i] == 0) {
-                continue;
+    /**
+     * permutation function
+     * @param str string to calculate permutation for
+     * @param low starting index
+     * @param high end index
+     */
+    private static void permute(String str, int low, int high)
+    {
+        System.out.println("begin: permute low " + low + " high " + high);
+        if (low == high)
+            System.out.println(str);
+        else
+        {
+            for (int i = low; i <= high; i++)
+            {
+                str = swap(str,low,i);
+                System.out.println("swap: " + str.charAt(low) + " " + str.charAt(i));
+                permute(str, low+1, high);
+                str = swap(str,low,i);
+                System.out.println("swap: " + str.charAt(low) + " " + str.charAt(i));
             }
-            result[recursionDepth] = str[i];
-            count[i]--;
-            permuteUtil(str, count, result, recursionDepth + 1);
-            count[i]++;
         }
+        System.out.println("end: permute low " + low + " high " + high);
     }
 
-    private void printArray(char input[]) {
-        for(char ch : input) {
-            System.out.print(ch);
-        }
-        System.out.println();
+    /**
+     * Swap Characters at position
+     * @param a string value
+     * @param i position 1
+     * @param j position 2
+     * @return swapped string
+     */
+    public static String swap(String a, int i, int j)
+    {
+        char temp;
+        char[] charArray = a.toCharArray();
+        temp = charArray[i] ;
+        charArray[i] = charArray[j];
+        charArray[j] = temp;
+        return String.valueOf(charArray);
     }
 
-    public static void main(String args[]) {
-        StringPermutation sp = new StringPermutation();
-        sp.permute("AABC".toCharArray());
-    }
 }
+
+// This code is contributed by Mihir Joshi

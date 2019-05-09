@@ -22,7 +22,7 @@ public class sortCharacterInString {
             {
                 // ignoring case
                 return Character.compare(Character.toLowerCase(c1),
-                        Character.toLowerCase(c2));
+                       Character.toLowerCase(c2));
             }
         });
 

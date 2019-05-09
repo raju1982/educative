@@ -66,6 +66,7 @@ class stringSegmentation_WordsInDictionary {
         dictionary.add("had");
         dictionary.add("play");
         dictionary.add("to");
+        dictionary.add("Ihadrequesttoplay");
         String str = "Ihadrequesttoplay";
 
         System.out.println("Result = " + can_segment_string(str, dictionary));

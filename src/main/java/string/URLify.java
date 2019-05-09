@@ -76,5 +76,18 @@ public class URLify {
         replaceSpaces(arr, trueLength);
         System.out.println("\"" + AssortedMethods.charArrayToString(arr) + "\"");
         System.out.println(urlfy(str));
+
+
+        String[] tmp  = str.trim().split("[ \t]+");
+        StringBuilder result = new StringBuilder();
+        for(int i=0; i<tmp.length-1; i++){
+            result.append(tmp[i] + "%20");
+        }
+        result.append(tmp[tmp.length-1]);
+        System.out.println(result.toString());
+
     }
+
+
+
 }

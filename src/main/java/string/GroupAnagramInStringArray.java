@@ -5,6 +5,12 @@ import java.util.Comparator;
 
 import CtCILibrary.CtCILibrary.AssortedMethods;
 
+/*
+write a method to sort an array of strings so the string so that akk the anagrams are next to each each other.
+String[] array = {"apple", "banana", "carrot", "ele", "duck", "papel", "tarroc", "cudk", "eel", "lee"};
+ */
+
+
 public class GroupAnagramInStringArray {
     public static void main(String[] args) {
         String[] array = {"apple", "banana", "carrot", "ele", "duck", "papel", "tarroc", "cudk", "eel", "lee"};

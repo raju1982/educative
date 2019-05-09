@@ -28,14 +28,41 @@ public class TopKFrequentElements {
          */
 
 
-        for (Map.Entry<String, Integer> tmp : data.entrySet()) {
-            prQueue.add(tmp.getKey());
-            if (prQueue.size() > 3) {
+        for(String key:data.keySet()){
+            prQueue.add(key);
+            if(prQueue.size()>3){
                 prQueue.poll();
             }
         }
 
         System.out.println(Arrays.toString(prQueue.toArray()));
+    }
+
+    //another solution
+    public static String kthMostFrequent(String[] input, int index){
+        //input == null
+        //input.length == 0
+
+        Map<String, Integer> hmap = new HashMap<>();
+
+        for(int i=0; i<input.length; i++){
+            if(hmap.containsKey(input[i])){
+                hmap.put(input[i], hmap.get(input[i]) + 1);
+            }
+            else{
+                hmap.put(input[i],1);
+            }
+        }
+
+        List<String> tmp = new ArrayList<>(hmap.keySet());
+
+        Collections.sort(tmp, new Comparator<String>(){
+            public int compare(String a, String b){
+                return hmap.get(b) - hmap.get(a);
+            }
+        });
+
+        return tmp.get(index-1);
     }
 
     public static void main(String[] args){
