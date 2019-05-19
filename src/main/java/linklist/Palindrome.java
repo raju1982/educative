@@ -2,7 +2,7 @@ package linklist;
 import java.util.Stack;
 
 public class Palindrome {
-    public static boolean palindrome(NodeX input){
+    public static boolean isPalindrome(NodeX input){
 
         if(input == null){
             throw new IllegalArgumentException();
@@ -13,20 +13,19 @@ public class Palindrome {
         }
 
         Stack<String> data = new Stack<>();
+        NodeX pointer = input;
 
-        NodeX tmp = input;
-
-        while(tmp!=null){
-            data.push(tmp.getData());
-            tmp=tmp.getNextNode();
+        while(input!=null){
+            data.push(input.getData());
+            input = input.getNextNode();
         }
 
-        tmp = input;
-        while(tmp!=null){
-            if(data.pop() != tmp.getData()){
+
+        while(!data.isEmpty()){
+            if(!data.pop().equalsIgnoreCase(pointer.getData())){
                 return false;
             }
-            tmp=tmp.getNextNode();
+            pointer = pointer.getNextNode();
         }
         return true;
     }
@@ -41,7 +40,7 @@ public class Palindrome {
         c.setNextNode(d);
         NodeX e = new NodeX("M");
         d.setNextNode(e);
-        System.out.println(palindrome(a));
+        System.out.println(isPalindrome(a));
     }
 
 }

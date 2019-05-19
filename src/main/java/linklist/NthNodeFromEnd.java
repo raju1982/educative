@@ -2,46 +2,44 @@ package linklist;
 
 public class NthNodeFromEnd {
 
-    public static linklist.Node NthNode(LinkListPlay list, int nth){
-        Node current = list.getHead();
+    public static int length(Node input) {
         int count = 0;
-
-        while(current!=null){
-            current = current.getNextNode();
+        while (input != null) {
+            input = input.getNextNode();
             count++;
         }
+        return count;
+    }
 
-        int position = count - nth;
-        current = list.getHead();
-        count = 0;
-        while(current!=null){
-            current = current.getNextNode();
-            count++;
-            if(count == position){
+    public static Node searchNode(Node input, int position){
+        int length = length(input);
+        int pos = length - position;
+        while(input!=null){
+            pos--;
+            if(pos == 0){
                 break;
             }
+            input = input.getNextNode();
         }
-        return current;
+        return input;
     }
 
     public static void main(String[] args) {
-        LinkListPlay list = new LinkListPlay();
-        for (int i = 1; i <= 10; i++) {
-            if (i == 2) {
-                list.insertAtEnd(new Node(1));
-                continue;
-            }
-            list.insertAtEnd(new linklist.Node(i));
-        }
+        Node a = new Node(100);
+        Node b = new Node(200);
+        Node c = new Node(300);
+        Node d = new Node(400);
+        Node e = new Node(500);
+        Node f = new Node(600);
 
-        list.insertAtEnd(new linklist.Node(8));
-        list.insertAtEnd(new linklist.Node(1));
-        System.out.println(list.toString());
-        System.out.println(list.toString());
-        //reverse(list);
-        System.out.println(list.toString());
-        Node res = NthNode(list, 3);
-        System.out.println("hi");
+        a.setNextNode(b);
+        b.setNextNode(c);
+        c.setNextNode(d);
+        d.setNextNode(e);
+        e.setNextNode(f);
 
+        Node result = searchNode(a, 3);
+
+        System.out.println(result.getData());
     }
 }

@@ -3,14 +3,14 @@ package linklist;
 public class ReverseADoublyLinkedList {
 
     static Node2 Reverse(Node2 head) {
-        Node2 temp = head;
         Node2 newHead = head;
-        while (temp != null) {
-            Node2 prev = temp.getPreviousNode();
-            temp.setPreviousNode(temp.getNextNode());
-            temp.setNextNode(prev);
-            newHead = temp;
-            temp = temp.getPreviousNode();
+        Node2 prev;
+        while (head != null) {
+            prev = head.getPreviousNode();
+            head.setPreviousNode(head.getNextNode());
+            head.setNextNode(prev);
+            newHead = head;
+            head = head.getPreviousNode();
         }
         return newHead;
     }

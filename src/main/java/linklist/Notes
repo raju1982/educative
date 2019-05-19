@@ -1,0 +1,33 @@
+ static void delete(Node input, int val){
+        Node prev = null;
+        while(input!=null){
+            if(input.getData() == val){
+                prev.setNextNode(input.getNextNode());
+                break;
+            }
+            prev = input;
+            input = input.getNextNode();
+        }
+    }
+
+//val will be deleted from method input Node (Node input)
+//order of input Node will not change
+     public static void main(String[] args){
+         Node a = new Node(5);
+         Node b = new Node(6);
+         Node c = new Node(3);
+         Node d = new Node(8);
+         Node e = new Node(1);
+
+         a.setNextNode(b);
+         b.setNextNode(c);
+         c.setNextNode(d);
+         d.setNextNode(e);
+
+         delete(a, 3);
+
+         while(a!=null){
+             System.out.println(a.getData());
+             a=a.getNextNode();
+         }
+     }

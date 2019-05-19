@@ -4,9 +4,8 @@ public class length {
 
     public static int length(Node input) {
         int count = 0;
-        Node node = input;
-        while (node != null) {
-            node = node.getNextNode();
+        while (input != null) {
+            input = input.getNextNode();
             count++;
         }
         return count;

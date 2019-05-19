@@ -2,28 +2,23 @@ package linklist.search;
 
 public class findMidElement {
 
-    /*
-        static int findMidElement(LinkListPlay list){
-
-        if(list.getHead() == null){
-            throw new RuntimeException("invalid link list");
-        }
-
-        Node jumpOne = list.getHead();
-        Node jumpTwo = list.getHead().getNextNode().getNextNode();
-
-        if(jumpTwo ==  null){
-            return jumpOne.getData();
-        }
-
-        while(jumpTwo!=null){
-            jumpOne = jumpOne.getNextNode();
-            if(jumpTwo.getNextNode() == null){
-                break;
+/*
+    static Node findMiddleNode(Node input){
+        //Base case
+        if (input == null)
+            return input;
+        Node slow = input;
+        Node fast = input.getNextNode();
+        while(fast!= null){
+            fast = fast.getNextNode();
+            if(fast!=null){
+                fast = fast.getNextNode();
+                slow = slow.getNextNode();
             }
-            jumpTwo = jumpTwo.getNextNode().getNextNode();
         }
-        return jumpOne.getData();
+        return slow;
     }
-     */
+    */
+
+
 }

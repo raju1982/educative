@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class removeDuplicates {
-
+/*
     public static void removeDuplicate2(Node input) {
 
         Node currentNode = input.getNextNode();
@@ -51,6 +51,21 @@ public class removeDuplicates {
             }
         }
     }
+*/
+    public static void removeDuplicateNode(Node input) {
+        Set<Integer> data = new HashSet<>();
+        Node previous = null;
+        while (input != null) {
+            int tmp = input.getData();
+            if (data.contains(tmp)) {
+                previous.setNextNode(input.getNextNode());
+            } else {
+                data.add(tmp);
+            }
+            previous = input;
+            input = input.getNextNode();
+        }
+    }
 
 
     public static void main(String[] args) {
@@ -70,7 +85,7 @@ public class removeDuplicates {
 
         //removeDuplicate2(a);
 
-        removeDuplicate(a);
+        removeDuplicateNode(a);
 
         System.out.println("hi");
     }

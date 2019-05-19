@@ -45,6 +45,46 @@ public class IntersectionOfTwoList {
 
     }
 
+    /* better way to write */
+
+    public static int length(Node input){
+        int count = 0;
+        while(input!=null){
+            count++;
+            input=input.getNextNode();
+        }
+        return count;
+    }
+
+
+    public static int findIntersection(Node inputA, Node inputAA){
+
+        int lenA = length(inputA);
+        int lenAA = length(inputAA);
+
+        int diff = Math.abs(lenA-lenAA);
+
+        Node bigNode = lenA>lenAA?inputA:inputAA;
+        Node smallNode = lenA>lenAA?inputAA:inputA;
+
+        while(diff>0){
+            bigNode = bigNode.getNextNode();
+            diff--;
+        }
+
+        while(bigNode!=null){
+            if(bigNode==smallNode){
+                break;
+            }
+            bigNode = bigNode.getNextNode();
+            smallNode = smallNode.getNextNode();
+        }
+        if(bigNode!=null){
+            return bigNode.getData();
+        }
+        return -1;
+    }
+
     public static void main(String[] args){
         Node A = new Node(29);
         Node B = new Node(23);

@@ -2,36 +2,59 @@ package linklist;
 
 public class NthNodeSwapWithHead {
 
-    public static void NthNode(LinkListPlay list, int nth) {
-        linklist.Node previous = list.getHead();
-        int count = 1;
 
-        while (previous != null) {
-            previous = previous.getNextNode();
+    //better solution
+    /*
+        public static int length(Node input) {
+        int count = 0;
+        while (input != null) {
+            input = input.getNextNode();
             count++;
         }
+        return count;
+    }
 
-        int position = count - nth -1;
-        previous = list.getHead();
-        count = 0;
-        while (previous != null) {
-            previous = previous.getNextNode();
-            count++;
-            if (count == position) {
+    public static void swapNode(Node input, int position){
+        int length = length(input);
+        int pos = length - position;
+        Node head = input;
+        Node test = input;
+        Node prev = null;
+        while(input!=null){
+            pos--;
+            if(pos == 0){
                 break;
             }
+            prev = input;
+            input = input.getNextNode();
         }
 
-        Node tmp = list.getHead().getNextNode();
-        Node next = previous.getNextNode();
-        Node nextnext = next.getNextNode();
-
-        previous.setNextNode(list.getHead());
-        list.getHead().setNextNode(nextnext);
-        next.setNextNode(tmp);
-        list.setHead(next);
+        Node tmp = head.getNextNode();
+        prev.setNextNode(head);
+        head.setNextNode(input.getNextNode());
+        input.setNextNode(tmp);
 
     }
+
+    public static void main(String[] args) {
+        Node a = new Node(100);
+        Node b = new Node(200);
+        Node c = new Node(300);
+        Node d = new Node(400);
+        Node e = new Node(500);
+        Node f = new Node(600);
+
+        a.setNextNode(b);
+        b.setNextNode(c);
+        c.setNextNode(d);
+        d.setNextNode(e);
+        e.setNextNode(f);
+
+        swapNode(a, 3);
+
+        System.out.println("");
+    }
+     */
 
     public static void swapNthNodeWithHead(LinkListPlay list, int nth){
         int count=1;

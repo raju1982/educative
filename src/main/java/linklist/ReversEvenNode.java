@@ -1,5 +1,5 @@
 package linklist;
-
+//https://www.geeksforgeeks.org/given-linked-list-reverse-alternate-nodes-append-end/
 public class ReversEvenNode {
 
     public static LinkListPlay oddEven(LinkListPlay input) {
