@@ -1,5 +1,4 @@
-package array.play;
-import java.util.Arrays;
+package array;
 
 /*
 You will be given a list of integers, , and a single integer . You must create an array of length from elements of such that its unfairness is minimized.
@@ -14,7 +13,9 @@ As an example, consider the array  with a  of . Pick any two elements, test .
 Testing for all pairs, the solution  provides the minimum unfairness.
  */
 
-public class Test {
+import java.util.Arrays;
+
+public class MinMaxUnfairness {
     static int maxMin(int k, int[] arr) {
         Arrays.sort(arr);
         int currentIndex = 0;

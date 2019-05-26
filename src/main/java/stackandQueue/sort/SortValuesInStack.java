@@ -9,22 +9,14 @@ public class SortValuesInStack {
         Stack<Integer> tmp = new Stack<>();
 
         while(!input.isEmpty()){
+            int num = input.pop();
 
-            int value = input.pop();
-            if(tmp.isEmpty()){
-                tmp.push(value);
-                continue;
-            }
-
-            if(value >= tmp.peek()){
-                tmp.push(value);
-            }
-            else{
+            if(!tmp.isEmpty() && num<tmp.peek()){
                 while(!tmp.isEmpty()){
                     input.push(tmp.pop());
                 }
-                tmp.push(value);
             }
+            tmp.push(num);
         }
 
         while(!tmp.isEmpty()){
@@ -43,6 +35,8 @@ public class SortValuesInStack {
 
         sort(input);
 
-        System.out.println();
+        while(!input.isEmpty()){
+            System.out.println(input.pop());
+        }
     }
 }

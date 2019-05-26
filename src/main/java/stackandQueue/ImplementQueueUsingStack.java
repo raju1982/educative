@@ -4,29 +4,29 @@ import java.util.Stack;
 public class ImplementQueueUsingStack {
 
     //enqueue
-    private Stack<Integer> tempStack = new Stack<Integer>();
-    private Stack<Integer> mainStack = new Stack<Integer>();
+    private Stack<Integer> enqueueStack = new Stack<Integer>();
+    private Stack<Integer> dequeueStack = new Stack<Integer>();
 
     public void enqueue(int input){
-        if(!mainStack.isEmpty()) {
-            while(!mainStack.isEmpty()){
-                tempStack.push(mainStack.pop());
+        //if(!dequeueStack.isEmpty()) {
+            while(!dequeueStack.isEmpty()){
+                enqueueStack.push(dequeueStack.pop());
             }
-        }
-        tempStack.push(input);
+        //}
+        enqueueStack.push(input);
     }
 
     public int dequeue(){
-        if(tempStack.isEmpty() && mainStack.isEmpty()){
+        if(enqueueStack.isEmpty() && dequeueStack.isEmpty()){
             throw new RuntimeException("queue is empty");
         }
 
-        if(!tempStack.isEmpty()) {
-            while(!tempStack.isEmpty()){
-                mainStack.push(tempStack.pop());
+        //if(!enqueueStack.isEmpty()) {
+            while(!enqueueStack.isEmpty()){
+                dequeueStack.push(enqueueStack.pop());
             }
-        }
-        return mainStack.pop();
+        //}
+        return dequeueStack.pop();
     }
 
     public static void main(String[] args){

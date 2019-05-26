@@ -1,52 +1,64 @@
 package stackandQueue.tmp;
+
 import java.util.Stack;
-import java.util.Set;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.LinkedList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.EmptyStackException;
 
-public class Temp{
+public class Temp {
+    private int[] data;
+    private int size=10;
+    private int index=-1;
+    private int min=0;
 
-    public static void sort(Stack<Integer> input){
-        Stack<Integer> result = new Stack<>();
+    public Temp(){
+        data = new int[size];
+    }
 
-        while(!input.isEmpty()){
-            int tmp = input.pop();
+    public boolean isEmpty(){
+        return min>index?true:false;
+    }
 
-            if(result.isEmpty()){
-                result.push(tmp);
-                continue;
-            }
+    public void push(int num){
+        if(index>size-1){
+            throw new StackOverFlowException();
+        }
+        data[++index] = num;
+    }
 
-            if(tmp>=result.peek()){
-                result.push(tmp);
-            }
-            else{
-                while(!result.isEmpty()){
-                    input.push(result.pop());
-                }
-                result.push(tmp);
-            }
+    public int pop(){
+        if(isEmpty()){
+            throw new EmptyStackException();
         }
 
-        while(!result.isEmpty()){
-            input.push(result.pop());
+        return data[min++];
+    }
+
+    public int peek(){
+        if(isEmpty()){
+            throw new EmptyStackException();
         }
+        return data[min];
     }
 
     public static void main(String[] args){
-        Stack<Integer> input = new Stack<>();
-        input.push(5);
-        input.push(6);
-        input.push(3);
-        input.push(10);
-        input.push(1);
-
-        sort(input);
-
-        System.out.println();
+        Temp data = new Temp();
+        System.out.println(data.isEmpty());
+        data.push(1);
+        System.out.println(data.isEmpty());
+        data.push(2);
+        data.push(3);
+        System.out.println(data.pop());
+        System.out.println(data.peek());
+        System.out.println(data.pop());
+        System.out.println(data.isEmpty());
+        System.out.println(data.pop());
+        System.out.println(data.isEmpty());
     }
+}
 
-
+class StackOverFlowException extends RuntimeException{
 
 }

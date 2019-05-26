@@ -8,11 +8,11 @@ public class decimalToBinary {
     }
 
     public static String decimalToBinary(int number){
-        StringBuffer str = new StringBuffer();
+        StringBuilder str = new StringBuilder();
         Stack<Integer> data = new Stack<Integer>();
         int num = number;
         while(num>0){
-            data.add(num%2);
+            data.push(num%2);
             num = num/2;
         }
         while(!data.isEmpty()){
