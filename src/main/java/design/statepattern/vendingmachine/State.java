@@ -1,4 +1,4 @@
-package design.statepattern;
+package design.statepattern.vendingmachine;
 
 public interface State {
     public void insertCoin()throws MachineWarning;

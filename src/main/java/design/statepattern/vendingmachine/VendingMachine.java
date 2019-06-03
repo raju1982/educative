@@ -1,4 +1,4 @@
-package design.statepattern;
+package design.statepattern.vendingmachine;
 
 public class VendingMachine {
     State coninInsertedState = new CoinInsertedState(this);
