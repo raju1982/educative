@@ -1,0 +1,16 @@
+Command Object- a command object separates the execution of an action from the action itself.
+The receiver - receives the action
+The Invoker - Invokes the action
+The client - The users who Triggers the execution of the action
+
+
+element triggers notification -> observer pattern
+in UI programming command pattern and observer pattern are used heavily.
+
+thread example -
+defining the command object  - Wrap action in the body of an object that implements an interface with just one method -> callable, runnable
+The Invoker - we then ask that this object "do its thing" on a separate thread. - thread.start
+
+
+
+

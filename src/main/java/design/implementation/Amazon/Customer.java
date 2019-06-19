@@ -15,5 +15,7 @@ public abstract class Customer {
   		searchProductsByName(String name)
   		searchProductsByCategory(String category)
   }
+  public bool createOrder(Item item, billing, shipping);
+
 }
  */

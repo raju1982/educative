@@ -1,0 +1,152 @@
+Strategy Pattern
+
+example - duck, cat, dog
+
+problem -
+inheritance cannot be used since duck behaviour is changing across subclasses.  *****
+find the parts that changes often and try and separate them from the parts of your application that don't change.
+fly and quack are the parts that vary across ducks.
+
+bad solution - Duck implements java interface with fly and quack method.  java interface have no implementation, so no code. need to track down all classes that have implemented interface and make code change. this is bad.
+
+good solution -
+two interface(one for fly and one for quack) , concrete classes representing behaviour will extends these interface.
+    other objects can reuse fly and quack behaviour.
+    new behaviour can be added without modifying any of existing behaviour classes.
+    new behaviour can be added at runtime.
+
+the algorithms are nothing but the behavior interfaces.
+
+
+public abstract class Duck {
+	FlyBehavior flyBehavior;
+	QuackBehavior quackBehavior;
+
+	public Duck() {
+	}
+
+	public void setFlyBehavior (FlyBehavior fb) {
+		flyBehavior = fb;
+	}
+
+	public void setQuackBehavior(QuackBehavior qb) {
+		quackBehavior = qb;
+	}
+
+	abstract void display();
+
+	public void performFly() {
+		flyBehavior.fly();
+	}
+
+	public void performQuack() {
+		quackBehavior.quack();
+	}
+
+	public void swim() {
+		System.out.println("All ducks float, even decoys!");
+	}
+}
+
+
+
+
+public interface FlyBehavior {
+	public void fly();
+}
+
+
+
+
+public class FlyNoWay implements FlyBehavior {
+	public void fly() {
+		System.out.println("I can't fly");
+	}
+}
+
+
+
+
+
+public class MallardDuck extends Duck {
+
+	public MallardDuck() {
+		quackBehavior = new Quack();
+        flyBehavior = new FlyWithWings();
+	}
+
+	public void display() {
+		System.out.println("I'm a real Mallard duck");
+	}
+}
+
+
+
+public class MiniDuckSimulator1 {
+
+	public static void main(String[] args) {
+
+		Duck mallard = new MallardDuck();
+		mallard.performQuack();
+		mallard.performFly();
+
+		Duck model = new ModelDuck();
+		model.performFly();
+		model.setFlyBehavior(new FlyRocketPowered());
+		model.performFly();
+
+	}
+}
+
+
+==========================================
+example -
+saving files in different formats,
+running various sorting algorithms
+file compression
+
+
+//Strategy Interface
+public interface CompressionStrategy {
+  public void compressFiles(ArrayList<File> files);
+}
+
+public class ZipCompressionStrategy implements CompressionStrategy {
+  public void compressFiles(ArrayList<File> files) {
+    //using ZIP approach
+  }
+}
+
+public class RarCompressionStrategy implements CompressionStrategy {
+  public void compressFiles(ArrayList<File> files) {
+    //using RAR approach
+  }
+}
+
+public class CompressionContext {
+  private CompressionStrategy strategy;
+  //this can be set at runtime by the application preferences
+  public void setCompressionStrategy(CompressionStrategy strategy) {
+    this.strategy = strategy;
+  }
+
+  //use the strategy
+  public void createArchive(ArrayList<File> files) {
+    strategy.compressFiles(files);
+  }
+}
+
+
+It's obvious that all the client has to do now is pass through the files to the CompressionContext
+
+public class Client {
+  public static void main(String[] args) {
+    CompressionContext ctx = new CompressionContext();
+    //we could assume context is already set by preferences
+    ctx.setCompressionStrategy(new ZipCompressionStrategy());
+    //get a list of files...
+    ctx.createArchive(fileList);
+  }
+}
+
+================================================

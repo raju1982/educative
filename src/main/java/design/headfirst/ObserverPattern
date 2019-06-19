@@ -1,0 +1,10 @@
+The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers,
+and notifies them automatically of any state changes, usually by calling one of their methods.
+
+example
+- weather station - weatherData need to notify different weather display
+- cricket app that notifies viewers about the information such as current score, run rate etc.
+- a news agency can notify channels when it receives news.
+- subscribe magzine/newspaper
+
+

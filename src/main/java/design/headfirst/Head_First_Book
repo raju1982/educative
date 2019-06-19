@@ -1,0 +1,200 @@
+always implements equals method with a class, specially when search is needed.
+
+
+use ENUM instead of string -
+  no issues with lowercase or uppercase
+  no issue of null , empty string, spelling error
+
+
+if ((builder != null) && (!builder.equals("")) &&
+                    (!builder.equalsIgnoreCase(guitar.getBuilder())))
+
+if (guitar.getBackWood() != searchGuitar.getBackWood())
+
+
+
+user was passing guitarspec and not guitar object , create new guitar spec class (composition relationship with guitar class)
+
+
+in order to add one property in guitarspec, we need to update guitar (constructor) and inventory (search), this is bad.
+
+
+classes should be less dependent on each other, update the design to achieve this.
+
+open-close principle - class should be open for extension close for modification.
+
+encapsulation, composition and delegation
+
+find the parts that changes often and try and separate them from the parts of your application that don't change.
+
+encapsulate what varies.
+
+Create class for all noun (person, place or thing)
+
+Verb usually are methods
+
+when you have a set of properties that vary across your objects, use a collection, like a Map, to store those properties dynamically.
+
+subclasses must be substitutable for their base type. (LSP)
+
+cohesion - look through the methods of your class do they all relate to the name of your class.
+
+single responsibility principle - one reason to change - cohesion
+single responsibility principle applies to both classes and method.
+
+highly cohesive software is loosely coupled.
+
+code to interface.
+
+if a code violate LSP, consider using delegation, composition or aggregation.
+
+composition lets you choose a behaviour from a family of behaviour often via several implementation of an interface.
+
+if value does not exists in Map , throw an IllegalArgumentException instead of returning null value.
+
+do not expose internal implementation to client.
+addStation(Station) is bad
+addStation(String) is good
+
+use inheritance when one object behaves like another, rather than just when the IS-A relationship applies.
+rectangle - square
+
+always override equals and toString method.
+
+Program to interface not implementation.
+
+Always program against the interface provided by other folks and for your own code provide a clean interface.
+This way code will be loosely coupled.
+Implementation change can be done easily without affecting the client code.
+
+Principle of least knowledge aka Demetre’s Law -
+In any class you write only make method call to -
+Object created inside class.
+Object passed in as parameter to method of your class.
+Each unit should have limited knowledge unit about other unit.
+
+
+
+Classes should be open for extension -
+Inheritance
+delegation
+composition
+Delegation can be an alternative to inheritance.
+
+
+Delegation means that you use an object of another class as an instance variable, and forward messages to the instance.
+
+// Java program to illustrate delegation
+class RealPrinter {
+    // the "delegate"
+    void print()
+    {
+        System.out.println("The Delegate");
+    }
+}
+
+class Printer {
+    // the "delegator"
+    RealPrinter p = new RealPrinter();
+
+    // create the delegate
+    void print()
+    {
+        p.print(); // delegation
+    }
+}
+
+public class Tester {
+    // To the outside world it looks like Printer actually prints.
+public static void main(String[] args)
+    {
+        Printer printer = new Printer();
+        printer.print();
+    }
+}
+
+
+
+// Java program to illustrate Inheritance
+class RealPrinter {
+    // base class implements method
+    void print()
+    {
+        System.out.println("Printing Data");
+    }
+}
+// Printer Inheriting functionality of real printer
+    class Printer extends RealPrinter {
+    void print()
+    {
+        super.print(); // inside calling method of parent
+    }
+}
+
+public class Tester {
+    // To the outside world it looks like Printer actually prints.
+public static void main(String[] args)
+    {
+        Printer printer = new Printer();
+        printer.print();
+    }
+}
+
+
+
+
+
+
+composition vs inheritance
+
+Composition = has A , inheritance = is A
+Composition refers defining behavior by the member variable a class include.
+Inheritance refers to defining behaviour by the interface or classes that a class inherit from.
+
+Now let's say ClassA implementation is changed like below, a new method bar() is added.
+
+public class ClassA {
+	public void foo(){
+	}
+	public int bar(){
+		return 0;
+	}
+}
+
+class ClassB extends ClassA{
+	public void bar(){
+	}
+}
+
+As soon as you start using new ClassA implementation, you will get compile time error in ClassB as The return type is incompatible with ClassA.bar(). The solution would be to change either the superclass or the subclass bar() method to make them compatible.
+
+If you would have used Composition over inheritance, you will never face this problem. A simple example of ClassB implementation using Composition can be like below.
+
+class ClassB{
+	ClassA classA = new ClassA();
+	public void bar(){
+		classA.foo();
+		classA.bar();
+	}
+}
+
+
+There is no access control in inheritance whereas access can be restricted in composition. We expose all the superclass methods to the other classes having access to subclass. So if a new method is introduced or there are security holes in the superclass, subclass becomes vulnerable. Since in composition we choose which methods to use, it's more secure than inheritance. For example, we can provide ClassA foo() method exposure to other classes using below code in ClassB.
+
+
+class ClassB {
+	ClassA classA = new ClassA();
+
+	public void foo(){
+		classA.foo();
+	}
+
+	public void bar(){
+	}
+}
+
+This is one of the major advantage of composition over inheritance.
+
+
+
+

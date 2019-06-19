@@ -1,0 +1,16 @@
+Lot of objects having a common interface or abstract base class.
+Lot of objects each with a specified independent behavior, independent of each other.
+Decorator objects are usually chained together and should never know any details of the other objects in chain.
+
+starbucks example -
+
+bad design -
+only one Beverage superclass -
+price change for condiments will force us to alter existing code.
+new condiments will force us to add new classes
+we may have new beverages, for some of these beverages condiments may not be appropriate, yet subclasses may inherit method. (tea subclass may inherit hasWhip())
+
+tea with milk
+tea without milk
+hot chocolate with whipped cream
+hot chocolate without whipped cream
