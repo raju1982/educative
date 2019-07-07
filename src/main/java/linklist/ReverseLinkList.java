@@ -1,10 +1,8 @@
 package linklist;
 
 public class ReverseLinkList {
-    public static void reverseNode(Node node){
-        Node prev = null;
-        Node current = node;
-        Node next;
+    public static void reverseNode(Node current){
+        Node prev = null, next;
         while (current != null) {
             next = current.getNextNode();
             current.setNextNode(prev);

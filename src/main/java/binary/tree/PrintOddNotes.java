@@ -6,14 +6,14 @@ import java.util.Queue;
 public class PrintOddNotes {
 
     public static void main(String[] args) {
-        Node a = new Node(5);
-        Node b = new Node(7);
-        Node c = new Node(9);
-        Node d = new Node(12);
-        Node e = new Node(14);
-        Node f = new Node(16);
-        Node g = new Node(19);
-        Node h = new Node(21);
+        binary.tree.Node a = new binary.tree.Node(5);
+        binary.tree.Node b = new binary.tree.Node(7);
+        binary.tree.Node c = new binary.tree.Node(9);
+        binary.tree.Node d = new binary.tree.Node(12);
+        binary.tree.Node e = new binary.tree.Node(14);
+        binary.tree.Node f = new binary.tree.Node(16);
+        binary.tree.Node g = new binary.tree.Node(19);
+        binary.tree.Node h = new binary.tree.Node(21);
 
         a.setLeftNode(b);
         a.setRightNode(c);
@@ -29,24 +29,27 @@ public class PrintOddNotes {
         printOddNodes(a);
     }
 
-    static void printOddNodes(Node node) {
-        Queue<Node> data = new LinkedList<>();
-        data.add(node);
+    static void printOddNodes(binary.tree.Node root) {
+        Queue<binary.tree.Node> data = new LinkedList<>();
+        data.add(root);
         while (!data.isEmpty()) {
-            Node np = data.poll();
-            if(np.getData()%2 != 0) {
-                System.out.print(np.getData() + " -> ");
+            binary.tree.Node node = data.poll();
+            if(node.getData()%2 != 0) {
+                System.out.print(node.getData() + " -> ");
             }
-            Node left = np.getLeftNode();
+            binary.tree.Node left = node.getLeftNode();
             if (left != null) {
                 data.add(left);
             }
-            Node right = np.getRightNode();
+            Node right = node.getRightNode();
             if (right != null) {
                 data.add(right);
             }
         }
     }
 }
+
+
+
 
 

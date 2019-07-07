@@ -1,25 +1,27 @@
 package binary.tree;
 
+/*
+Given an array that stores a complete Binary Search Tree, write a function that efficiently prints the given array in ascending order.
+*/
 public class SortedOrderPrintCompleteTreeArray {
-    private void print(int arr[],int current){
-        if(current >= arr.length){
+    private static void printSorted(int[] arr, int start, int end) {
+        if(start > end)
             return;
-        }
+
         // print left subtree
-        print(arr,2*current+1);
+        printSorted(arr, start*2 + 1, end);
+
         // print root
-        System.out.println(arr[current]);
+        System.out.print(arr[start] + " ");
+
         // print right subtree
-        print(arr,2*current+2);
+        printSorted(arr, start*2 + 2, end);
     }
 
-    public void print(int arr[]){
-        print(arr,0);
-    }
-
-    public static void main(String args[]){
+    // driver program to test above function
+    public static void main(String[] args) {
         int arr[] = {4, 2, 5, 1, 3};
-        SortedOrderPrintCompleteTreeArray sop = new SortedOrderPrintCompleteTreeArray();
-        sop.print(arr);
+
+        printSorted(arr, 0, arr.length-1);
     }
 }

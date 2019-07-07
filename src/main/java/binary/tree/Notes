@@ -4,3 +4,12 @@ extremely fast lookup of specific value and insertion of new node
 tree to array ->
  in-order traversal on the tree to get a sorted array which is in ascending order.
  use String builder -> stringbuilder.tostring.split -> ascending order array
+
+
+
+
+BINARY SEARCH TREES ARE TYPICALLY USED FOR FAST INSERTION AND FAST LOOKUP
+
+IN A TREE WHEN A NEW NODE IS ADDED THERE IS EXACTLY ONE PLACE THAT IT CAN BE THE STRUCTURE OF A TREE DEPENDS ON THE ORDER IN WHICH THE NODES ARE ADDED INSERTION
+
+WHILE SEARCHING FOR A NODE IN THE TREE THERE IS ONLY ONE PLACE WHERE THAT NODE CAN BE FOUND WE CAN SIMPLY FOLLOW THE RIGHT OR LEFT SUB-TREES BASED ON THE VALUE WE WANT TO FIND LOOKUP

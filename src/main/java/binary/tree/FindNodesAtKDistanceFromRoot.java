@@ -6,17 +6,17 @@ public class FindNodesAtKDistanceFromRoot {
 
     public static void main(String[] args){
 
-        Node one = new Node(1);
-        Node two = new Node(2);
-        Node three = new Node(3);
-        Node four = new Node(4);
-        Node five = new Node(5);
-        Node six = new Node(6);
-        Node seven = new Node(7);
-        Node eight = new Node(8);
-        Node nine = new Node(9);
+        binary.tree.Node one = new binary.tree.Node(1);
+        binary.tree.Node two = new binary.tree.Node(2);
+        binary.tree.Node three = new binary.tree.Node(3);
+        binary.tree.Node four = new binary.tree.Node(4);
+        binary.tree.Node five = new binary.tree.Node(5);
+        binary.tree.Node six = new binary.tree.Node(6);
+        binary.tree.Node seven = new binary.tree.Node(7);
+        binary.tree.Node eight = new binary.tree.Node(8);
+        binary.tree.Node nine = new binary.tree.Node(9);
 
-        Node head = insert(null, five);
+        binary.tree.Node head = insert(null, five);
 
         insert(head, eight);
         insert(head, two);
@@ -34,7 +34,7 @@ public class FindNodesAtKDistanceFromRoot {
 
     }
 
-    public static Node insert(Node head, Node node){
+    public static binary.tree.Node insert(binary.tree.Node head, binary.tree.Node node){
         if(head==null){
             return node;
         }

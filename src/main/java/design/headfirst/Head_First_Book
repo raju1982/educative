@@ -198,3 +198,142 @@ This is one of the major advantage of composition over inheritance.
 
 
 
+For any publicly exported method always validate the input parameters to the method.
+
+It is critical to check the validity of constructor parameters to prevent the construction of an object that violates its class invariants.
+
+anytime you write a method or constructor that assigns a client-provided object to an internal data structure there exists the possibility
+of the client changing the passed-in object at a later time. The fix for the DefensiveClass class is to create a copy of the list of
+passed-in keys to the constructor.
+
+Don't return a reference to an internal field that is mutable and can be modified by an untrusted client. This is a defensive measure against attacks.
+Defensive copying may be unneeded if the class trusts its clients or copying is expensive. Continuing with our DefensiveClass we can write a getter
+for the cryptoKeys as follows:
+
+    List<String> getKeys() {
+        // Return an unmodifiable view to the internal data-structure
+        return Collections.unmodifiableList(cryptoKeys);
+    }
+
+
+Method called from constructor are generally declared final. if a constructor calls a non-final method, a subclass may redefine that method with surprising or undesirable results.
+public class Test extends Extension {
+
+    Test() {
+        super();
+    }
+   public void call(){
+        System.out.println("Test call");
+    }
+
+    public static void main(String[] args){
+        Extension boring = new Test();
+    }
+
+
+}
+
+class Extension{
+
+    public void call(){
+        System.out.println("extension call");
+    }
+
+    Extension(){
+        call();
+        System.out.println("extension");
+    }
+
+}
+
+
+Avoid defining methods with more than four parameters.
+
+Define parameter types using interfaces rather than classes.
+
+Exercise caution when overloading methods as it can produce results not anticipated by the programmer.
+  void print(Set<String> collection) {
+        System.out.println("Method deals with sets only");
+    }
+
+    void print(Collection<String> collection) {
+        System.out.println("Method deals with collections only");
+    }
+
+    Which print() method would be invoked for the following snippet:
+        Set<String> set = new HashSet<>(keys);
+            Collection<String> ref = set;
+            // Which print method is invoked?
+            print(ref);
+
+Even though the runtime type of the variable ref is Set but the compile time type is Collection and the method matching is performed at compile time
+therefore the print method which takes in a collection type is invoked when the program is run.
+
+
+Exercise caution when using the varargs facility in performance critical environments. Every invocation of a varargs method internally causes an
+array to be allocated and initialized.
+
+
+Return empty arrays or Collections but not null from methods. If the developer invoking the method as a client forgets to check for the null case,
+it will cause his or her code to fail with a null pointer exception.
+
+
+Use doc comments extensively for documentation. Consider doc comments mandatory for every exported classes, interfaces, methods, fields, constructors etc.
+Javadoc is the most effective way to document your API.
+
+
+Strive to minimize the scope of a local variable The best way for minimizing the scope of a local variable is to declare it where it is first used.
+
+
+Don't use float and double types where exact results are required.Use BigDecimal, int, or long instead.
+
+
+For-each loops should be preferred to for loops when iterating over collections. If a custom type consists of a group of elements, consider having it implement Iterable interface.
+
+
+Applying == operator on boxed primitives is almost always wrong.
+
+
+Mixing primitive types and their corresponding object types can result in unintended boxing/unboxing operations causing decreased performance.
+
+
+Favor the use of interfaces rather than classes to refer to objects. If appropriate interface types exist, then parameters, return values, variables, and fields should all be declared using interface types.
+This allows decoupling code from implementation.
+
+
+Use checked exceptions for conditions from which the caller can reasonably be expected to recover. Checked exceptions force the programmer to deal with exceptional conditions, greatly enhancing reliability.
+
+Runtime exceptions should be used to indicate programming errors only.
+
+Always declare checked exceptions individually, and document precisely the conditions under which each one is thrown using the Javadoc @throws tag.
+
+
+class Unsafe {
+
+    Boolean flag;
+
+
+    public synchronized void setFlag(Boolean flag) {
+        this.flag = flag;
+    }
+
+    // Read path is unsynchronized and a thread reading
+    // the flag may never see an updated value by another thread
+    public Boolean getFlag() {
+        return flag;
+    }
+
+}
+Synchronizing only the write path isn't sufficient for thread-safety. In fact, synchronization has no effect unless both read and write operations are synchronized.
+
+
+
+private static volatile int nextID = 0;
+   public static int generateID() {
+       nextID = nextID + 1;
+       return nextID;
+}
+It's easy to see that the rewritten method needs to be synchronized and volatile isn't enough. Multiple threads calling into the method can end up reading the same value of nextID and incrementing it, resulting in two identical IDs.
+
+
+

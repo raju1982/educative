@@ -11,6 +11,15 @@ public class length {
         return count;
     }
 
+    public static int solution(Node node){
+        if(node == null){
+            return 0;
+        }
+
+        return solution(node.getNextNode()) + 1;
+    }
+
+
     public static void main(String[] args) {
         Node a = new Node(5);
         Node b = new Node(10);
@@ -21,9 +30,10 @@ public class length {
         a.setNextNode(b);
         b.setNextNode(c);
         c.setNextNode(d);
-        d.setNextNode(b);
+        d.setNextNode(e);
         e.setNextNode(f);
 
         System.out.println(length(a));
+        System.out.println(solution(a));
     }
 }

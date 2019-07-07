@@ -3,6 +3,8 @@ package hashTable;
 import java.util.Map;
 import java.util.HashMap;
 
+/*Find two pairs in an Array such that a+b = c+d*/
+
 public class FindTwoPairsInArray {
 
     static void find(int[] arr){
@@ -10,6 +12,7 @@ public class FindTwoPairsInArray {
 
         for(int i=0; i<arr.length; i++){
             for(int j=i+1; j<arr.length; j++){
+                //if such pair exists whose sum matches with current arr[i] & arr[j] value.
                 if(data.containsKey(arr[i] + arr[j])){
                     System.out.println(arr[i] + " , " + arr[j]);
                     int[] result = data.get(arr[i] + arr[j]);
@@ -21,7 +24,6 @@ public class FindTwoPairsInArray {
                 else{
                     data.put((arr[i] + arr[j]), new int[] {arr[i], arr[j]});
                 }
-
             }
         }
     }

@@ -30,16 +30,16 @@ public class QueuePlay{
         if(isFull()){
             throw new RuntimeException("queue is full.");
         }
-        /*if (back == data.length - 1) {
+        if (back == data.length - 1) {
             back = -1;
-        }*/
+        }
         numberOfitems++;
         data[++back] = input;
     }
 
     public int dequeue(){
         if(isEmpty()){
-            throw new RuntimeException("stack is empty.");
+            throw new RuntimeException("queue is empty.");
         }
         if (front == numberOfitems ) {
             front = 0;

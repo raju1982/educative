@@ -4,11 +4,21 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class SortedArrayToBalancedBST {
-    static Node root;
+    static binary.tree.Node root;
 
     /* A function that constructs Balanced Binary Search Tree
      from a sorted array */
-    static Node sortedArrayToBST(int arr[], int start, int end) {
+    /*
+    1) Get the Middle of the array and make it root.
+2) Recursively do same for left half and right half.
+      a) Get the middle of left half and make it left child of the root
+          created in step 1.
+      b) Get the middle of right half and make it right child of the
+          root created in step 1.
+     */
+
+
+    static binary.tree.Node sortedArrayToBST(int arr[], int start, int end) {
 
         /* Base Case */
         if (start > end) {
@@ -17,7 +27,7 @@ public class SortedArrayToBalancedBST {
 
         /* Get the middle element and make it root */
         int mid = (start + end) / 2;
-        Node node = new Node(arr[mid]);
+        binary.tree.Node node = new binary.tree.Node(arr[mid]);
 
         /* Recursively construct the left subtree and make it
          left child of root */
@@ -30,13 +40,13 @@ public class SortedArrayToBalancedBST {
         return node;
     }
 
-    static void breathFirstTraversal(Node node) {
-        Queue<Node> data = new LinkedList<>();
+    static void breathFirstTraversal(binary.tree.Node node) {
+        Queue<binary.tree.Node> data = new LinkedList<>();
         data.add(node);
         while (!data.isEmpty()) {
-            Node np = data.poll();
+            binary.tree.Node np = data.poll();
             System.out.print(np.getData() + " -> ");
-            Node left = np.getLeftNode();
+            binary.tree.Node left = np.getLeftNode();
             if (left != null) {
                 data.add(left);
             }
