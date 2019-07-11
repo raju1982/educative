@@ -82,8 +82,18 @@ public class BSTCommonFunctions {
         return minValue(root.getLeftNode());
     }
 
+    public static int minValueItr(Node root){
+        if(root==null){
+            return Integer.MIN_VALUE;
+        }
+        while(root.getLeftNode()!=null){
+            root=root.getLeftNode();
+        }
+        return root.data;
+    }
 
 
+/*https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/ */
     //maximum depth of binary tree
     public static int maxDepth(Node root){
         if(root == null){
@@ -94,15 +104,13 @@ public class BSTCommonFunctions {
             return 0;
         }
 
-        int leftNodeDepth = 1+ maxDepth(root.getLeftNode());
-        int rightNodeDepth = 1+ maxDepth(root.getRightNode());
+        int leftNodeDepth = 1 + maxDepth(root.getLeftNode());
+        int rightNodeDepth = 1 + maxDepth(root.getRightNode());
 
         return Math.max(leftNodeDepth, rightNodeDepth);
     }
 
-
-
-
+    /*https://www.youtube.com/watch?v=vdwcCIkLUQI*/
     //mirror a binary tree
     public static void mirror(Node root) {
         if(root == null){
@@ -216,6 +224,9 @@ public class BSTCommonFunctions {
         insert(head, two);
 
         breathFirstSearch(head);
+        System.out.println();
+        System.out.println(minValue(head));
+        System.out.println(minValueItr(head));
         System.out.println();
         System.out.println(maxDepth(head));
 
