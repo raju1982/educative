@@ -36,9 +36,11 @@ import java.util.Queue;
  */
 public class TreeTraversalLevelByLevel {
 
-    /**
-     * Use two queue to print level by level
-     */
+
+     // Use two queue to print level by level
+
+
+    /*
     public void levelByLevelTwoQueue(Node root) {
         if (root == null) {
             return;
@@ -72,9 +74,9 @@ public class TreeTraversalLevelByLevel {
         }
     }
 
-    /**
-     * Use one queue and delimiter to print level by level
-     */
+
+     // Use one queue and delimiter to print level by level
+
     public void levelByLevelOneQueueUsingDelimiter(Node root) {
         if (root == null) {
             return;
@@ -101,9 +103,8 @@ public class TreeTraversalLevelByLevel {
         }
     }
 
-    /**
-     * Use one queue and count to print level by level
-     */
+     // Use one queue and count to print level by level
+
     public void levelByLevelOneQueueUsingCount(Node root) {
         if (root == null) {
             return;
@@ -154,4 +155,5 @@ public class TreeTraversalLevelByLevel {
         System.out.println("\n\n3. One queue and count");
         tt.levelByLevelOneQueueUsingCount(root);
     }
+    */
 }

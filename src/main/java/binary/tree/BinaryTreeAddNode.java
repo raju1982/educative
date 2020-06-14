@@ -18,7 +18,7 @@ public class BinaryTreeAddNode {
     }
 
      */
-
+/*
     public Node addNode(int data, Node head){
         Node tempHead = head;
         Node n = Node.newNode(data);
@@ -60,4 +60,6 @@ public class BinaryTreeAddNode {
         head = bt.addNode(21, head);
 
     }
+    */
+
 }
