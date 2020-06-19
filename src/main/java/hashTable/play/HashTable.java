@@ -11,6 +11,7 @@ public class HashTable {
     }
 
     void put(Integer key, Integer value){
+        //use modulus
         int hash = key%size;
 
         if(data[hash] == null){

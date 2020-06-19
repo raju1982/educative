@@ -1,0 +1,26 @@
+Hashing is a technique -> O(1) average time to search, insert or delete elements.
+
+Avoid hashing if ->
+find closest value (AVL or read/black tree)
+sorted data (AVL or read/black tree)
+prefix search (Trie)
+
+
+hashing implementation ->
+dictionary
+database indexing
+cryptography
+caches
+router
+getting data from database
+
+
+hash function characteristic ->
+1. should be able to handle various type of key (large integer, float, string)
+2. should generate value form 0 to n-1. n is the size of the data structure.
+3. should uniformly distribute the keys
+4. should be fast O(1) for integer and O(len) for string with length len
+
+
+
+
