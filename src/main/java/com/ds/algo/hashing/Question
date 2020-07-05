@@ -1,2 +1,2 @@
-//find no. of distinct element (count) in O(n) complexity
-//find count of frequency of array element
+//1. find no. of distinct element (count) in an array in O(n) complexity
+//2. find count of frequency of array element

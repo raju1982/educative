@@ -1,0 +1,5 @@
+1. String is a palindrome or not.
+2. find max no. of piece of rope, rope can be cut into three size of pieces.   [dynamoc programing has better solution]
+int ropeSize = 25; int a = 11, b = 12, c = 13;
+
+3.  given a string print all substring of it.
