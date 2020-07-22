@@ -1,4 +1,4 @@
-package string;
+package com.ds.algo.string;
 
 public class StringRotation {
 	public static boolean isSubstring(String big, String small) {

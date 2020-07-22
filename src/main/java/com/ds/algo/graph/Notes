@@ -1,0 +1,29 @@
+1. AdjacencyListUndirectedGraphRepresentation
+2  BFSUndirectedGraph - it is assumed that all vertices are reachable from the starting vertex.
+                     But in the case of disconnected graph or any vertex that is unreachable from all vertex,
+3. BFSForDisconnectedUndirectedGraph
+BFS - time complexity - O(no.OfVertcies+no.OFEdge)  ******
+4. NumberOfConnectedComponentsInUndirectedGraph
+
+BFS applications ->
+    shortest path in an unweighted graph
+    cycle detection
+    ford fulkerson algorithm
+    crawler in search engine
+    social networking search
+
+
+5. DepthFirstSearchInUndirectedGraph
+6. DepthFirstSearchInDisconnectedUndirectedGraph
+
+DFS - time complexity - O(no.OfVertcies+no.OFEdge)  *******
+
+DFS applications ->
+    cycle detection
+    Topological sorting (maven file checking depdencies***)
+    Path finding (source to destination)
+    solving Maze and similar puzzle.  (backtracking is based on DFS)
+    strongly connected components.
+
+7. DetectCycleInUndirectedGraph -> O(no.OfVertcies+no.OFEdge)  ******
+

@@ -1,0 +1,24 @@
+1. Palindrome
+2. Anagram
+
+3 .LeftMostRepeatingCharacter
+4. LeftMostNonRepeatingCharacter
+5. KthNonRepeatingCharacter [Given a string and a number k, find the k’th non-repeating character in the string.]
+[Input : str = geeksforgeeks, k = 3
+ Output : r
+ First non-repeating character is f,
+ second is o and third is r.]
+
+6. Pattern Search ******************* Learn Knuth–Morris–Pratt(KMP) Pattern Matching
+[INPUT - GEEKSFORGEEKS , pattern - EKS
+ OUTPUT -  2, 10
+
+ INPUT - AAAAA , pattern - AAA
+  OUTPUT - 0,1,2
+
+   INPUT - AAAAA , pattern - BCDEF
+    OUTPUT - not present
+]
+
+7. StringRotation
+
