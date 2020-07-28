@@ -13,5 +13,12 @@ An ArrayDeque (also known as an “Array Double Ended Queue”, pronounced as �
 An ArrayDeque implementation can be used as a Stack (Last-In-First-Out) or a Queue(First-In-First-Out).
 
 ArrayDeque ->
-stack -> push, pop, peek, size, isEmpty, contains   -> time complexity 0(1)
-queue ->                    size, isEmpty, contains
+stack -> push, pop, peekLast, size, isEmpty, contains   -> time complexity 0(1)
+queue -> offer,poll,peek, size, isEmpty, contains
+
+
+
+
+
+for future ->
+https://www.geeksforgeeks.org/the-stock-span-problem/

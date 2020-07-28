@@ -31,9 +31,9 @@ class DepthFirstSearchInDisconnectedUndirectedGraph {
 
     static void bfs(List<ArrayList<Integer>> adj, int noOfVertex) {
          boolean[] visitedNode = new boolean[noOfVertex];
-         for(int i=0; i<noOfVertex; i++) {
-             if(!visitedNode[i]) {
-                 depthFirstSearch(adj, i, visitedNode);
+         for(int startingPoint=0; startingPoint<noOfVertex; startingPoint++) {
+             if(!visitedNode[startingPoint]) {
+                 depthFirstSearch(adj, startingPoint, visitedNode);
              }
          }
     }

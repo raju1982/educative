@@ -27,3 +27,15 @@ DFS applications ->
 
 7. DetectCycleInUndirectedGraph -> O(no.OfVertcies+no.OFEdge)  ******
 
+8. DetectCycleInDirectedGraph -> O(no.OfVertcies+no.OFEdge)  ******
+
+Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge uv, vertex u comes before v in the ordering.
+Topological Sorting for a graph is not possible if the graph is not a DAG.**
+
+9. TopologicalSortingDFS (Time Complexity: O(V+E))
+
+10. KahnsAlgorithmForTopologicalSorting (Time Complexity: O(V+E))
+
+11. check for cycle in the directed graph using  Kahns Algorithm (KahnsAlgorithmForTopologicalSorting)
+
+

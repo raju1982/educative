@@ -1,4 +1,4 @@
-package stackandQueue;
+package com.ds.algo.stack;
 
 import java.util.Stack;
 
