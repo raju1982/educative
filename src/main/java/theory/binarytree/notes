@@ -1,0 +1,72 @@
+Non linear data structure
+Tree Data Structure is used to organise data in hierarchical manner
+
+===================
+Binary tree - degree of node can be at most 2
+
+traversal -
+Breadth First (OR Level Order)  root node -> left to right all child ->
+Depth First -
+    inorder   (Left Root Right)
+    preorder  (Root Left Right)
+    postorder (Left Right Root)
+
+Complete Binary Tree: A Binary Tree is a Complete Binary Tree if all the levels are completely filled except possibly the last level and the last level has to be filled left to right.
+Perfect Binary Tree A Binary tree is a Perfect Binary Tree in which all the internal nodes have two children and all leaf nodes are at the same level.
+
+//question order -
+
+DepthRecursiveTraversal
+HeightOfBinaryTree
+PrintNodesAtKDistance
+BranchSum
+LevelOrderTraversal
+LevelOrderTraversalLineByLine
+SizeOfBinaryTree
+MaximumInBinaryTree
+SameTree
+PrintLeftViewOfBinaryTree
+ChildrenSumProperty
+RootToLeafSumBinaryTree    <https://www.youtube.com/watch?v=Jg4E4KZstFE&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=7>
+SameBinaryTree              <https://www.youtube.com/watch?v=ySDDslG8wws&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=4>
+CheckForBalancedBinaryTree -> Test if A Binary tree is height balanced ?
+MaximumWidthOfBinaryTree
+ConvertBinaryTreeToDoublyLinkedList
+ConstructBinaryTreeFromInorderAndPreorder
+TreeTraversalInSpiralForm
+AveragesOfLevelsInBinaryTree
+DiameterOfABinaryTree
+LowestCommonAncestor
+GetLevelOfANodeInABinaryTree
+FindDistanceBetweenTwoNodesOfABinaryTree
+PrintAncestorsOfAGivenNodeInBinaryTree
+BurnABinaryTreeFromALeaf
+CountNodesInACompleteBinaryTree
+
+
+hard, not fully understood ->
+KthAncestorOfGivenNode
+FindTheLargestCompleteSubtreeInAGivenBinaryTree
+
+
+
+
+Tree -
+https://practice.geeksforgeeks.org/batch/dsa-4/
+https://www.educative.io/courses/data-structures-coding-interviews-java
+https://www.educative.io/courses/coderust-hacking-the-coding-interview
+https://www.algoexpert.io/questions
+elements book - java
+450 questions -> https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view
+
+
+Graph -
+https://www.youtube.com/watch?v=09_LlHjoEiY
+
+
+object-oriented-design -
+https://practice.geeksforgeeks.org/courses/object-oriented-design
+java -
+https://online.codingblocks.com/courses/coding-interview-preparation-course-online-java
+concurrent and parallel Java programming
+https://www.youtube.com/watch?v=NVcbxQEoseE&list=PLZ9NgFYEMxp6aIJ8c6sxI8jakvub-vQxb
