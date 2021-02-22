@@ -1,5 +1,8 @@
 package theory.binarytree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class HeightOfBinaryTree {
 
     public static void main(String[] args){
@@ -10,6 +13,7 @@ public class HeightOfBinaryTree {
         root.getRightNode().setRightNode(new Node(50));
 
         System.out.println(findHeight(root));
+        System.out.println(findHeight2(root));
     }
 
     //time complexity O(n)
@@ -19,5 +23,28 @@ public class HeightOfBinaryTree {
             return 0;
         }
         return Math.max(findHeight(root.getLeftNode()), findHeight(root.getRightNode())) + 1;
+    }
+
+    public static int findHeight2(Node node){
+        if(node == null){
+            return 0;
+        }
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(node);
+        int height = 0;
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            for(int i=0; i<size; i++){
+                Node tmpNode = queue.poll();
+                if(tmpNode.getLeftNode()!=null){
+                    queue.add(tmpNode.getLeftNode());
+                }
+                if(tmpNode.getRightNode()!=null){
+                    queue.add(tmpNode.getRightNode());
+                }
+            }
+            height++;
+        }
+        return height;
     }
 }

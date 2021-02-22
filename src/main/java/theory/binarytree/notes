@@ -14,24 +14,24 @@ Depth First -
 Complete Binary Tree: A Binary Tree is a Complete Binary Tree if all the levels are completely filled except possibly the last level and the last level has to be filled left to right.
 Perfect Binary Tree A Binary tree is a Perfect Binary Tree in which all the internal nodes have two children and all leaf nodes are at the same level.
 
-//question order -
 
+
+//question order -
 DepthRecursiveTraversal
 HeightOfBinaryTree
 PrintNodesAtKDistance
-BranchSum
+SumOFEachBranch
 LevelOrderTraversal
 LevelOrderTraversalLineByLine
 ReverseLevelOrderTraversalBinaryTree         https://www.youtube.com/watch?v=D2bIbWGgvzI&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=14
 SizeOfBinaryTree
 MaximumInBinaryTree
-SameTree
+SameBinaryTree               https://www.youtube.com/watch?v=ySDDslG8wws&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=4
 CheckIfTwoTreesAreMirror
 CheckForSymmetricTreeMirrorImageOfItself
 PrintLeftViewOfBinaryTree
 ChildrenSumProperty
-RootToLeafSumBinaryTree    <https://www.youtube.com/watch?v=Jg4E4KZstFE&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=7>
-SameBinaryTree              <https://www.youtube.com/watch?v=ySDDslG8wws&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=4>
+RootToLeafSumBinaryTree      https://www.youtube.com/watch?v=Jg4E4KZstFE&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=7
 CheckForBalancedBinaryTree -> Test if A Binary tree is height balanced ?
 MaximumWidthOfBinaryTree
 ConvertBinaryTreeToDoublyLinkedList
@@ -56,7 +56,7 @@ hard, not fully understood ->
 KthAncestorOfGivenNode
 FindTheLargestCompleteSubtreeInAGivenBinaryTree
 
-CheckForSymmetricTreeMirrorImageOfItself
+
 
 
 Tree -

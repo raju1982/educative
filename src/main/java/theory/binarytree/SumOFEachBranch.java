@@ -3,7 +3,7 @@ package theory.binarytree;
 import java.util.List;
 import java.util.ArrayList;
 
-public class BranchSum {
+public class SumOFEachBranch {
     public static void main(String[] args) {
         Node root = new Node(10);
         root.setLeftNode(new Node(20));
