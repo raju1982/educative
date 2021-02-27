@@ -33,11 +33,8 @@ public class LowestCommonAncestor {
         if(leftSubtreeLCA!=null && rightSubtreeLCA!=null){  //if leftSubtreeLCA is not null and rightSubtreeLCA is also not null that means current node is the LCA.
             return root;
         }
-        if(leftSubtreeLCA!=null){  //one subtree contains both numbers , other subtree does not contain any number.
-            return leftSubtreeLCA;
-        }
-        else{
-            return rightSubtreeLCA;  //either rightSubtree contains both numbers or it's null.
-        }
+
+        //one subtree contains both numbers , other subtree does not contain any number.
+        return leftSubtreeLCA != null ? leftSubtreeLCA : rightSubtreeLCA;
     }
 }

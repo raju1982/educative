@@ -13,6 +13,10 @@ public class PrintAncestorsOfAGivenNodeInBinaryTree {
         printAncestors(root, 7);
     }
 
+    /*
+    if the node is present in tree return true and print Ancestors.
+    otherwise, it return false;
+     */
     public static boolean printAncestors(Node root, int nodeData){
         if(root == null){
             return false;
@@ -22,7 +26,7 @@ public class PrintAncestorsOfAGivenNodeInBinaryTree {
             return true;
         }
 
-        if(printAncestors(root.getLeftNode(), 7) || printAncestors(root.getRightNode(), 7)){
+        if(printAncestors(root.getLeftNode(), nodeData) || printAncestors(root.getRightNode(), nodeData)){
             System.out.print(root.getData() + "\t");
             return true;
         }

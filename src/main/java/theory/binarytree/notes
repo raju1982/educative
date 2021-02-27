@@ -17,6 +17,7 @@ Perfect Binary Tree A Binary tree is a Perfect Binary Tree in which all the inte
 
 
 //question order -
+==============================   geeks for geeks dsa course  (https://practice.geeksforgeeks.org/batch/dsa-4/)
 DepthRecursiveTraversal
 HeightOfBinaryTree
 PrintNodesAtKDistance
@@ -25,36 +26,39 @@ LevelOrderTraversal
 LevelOrderTraversalLineByLine
 ReverseLevelOrderTraversalBinaryTree         https://www.youtube.com/watch?v=D2bIbWGgvzI&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=14
 SizeOfBinaryTree
+GetLevelOfANodeInABinaryTree *
 MaximumInBinaryTree
 SameBinaryTree               https://www.youtube.com/watch?v=ySDDslG8wws&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=4
 CheckIfTwoTreesAreMirror
+ConvertBinaryTreeToItsMirror
 CheckForSymmetricTreeMirrorImageOfItself
 PrintLeftViewOfBinaryTree
 ChildrenSumProperty
-RootToLeafSumBinaryTree      https://www.youtube.com/watch?v=Jg4E4KZstFE&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=7
-CheckForBalancedBinaryTree -> Test if A Binary tree is height balanced ?
+RootToLeafSumBinaryTree *     https://www.youtube.com/watch?v=Jg4E4KZstFE&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=7
+CheckForBalancedBinaryTree * -> Test if A Binary tree is height balanced ?
 MaximumWidthOfBinaryTree
-ConvertBinaryTreeToDoublyLinkedList
-ConstructBinaryTreeFromInorderAndPreorder
-TreeTraversalInSpiralForm
+ConvertBinaryTreeToDoublyLinkedList *
+ConstructBinaryTreeFromInorderAndPreorder *
+TreeTraversalInSpiralForm *
 AveragesOfLevelsInBinaryTree
-DiameterOfABinaryTree
 IterativePreOrderTraversal
-IterativeInorderTraversal       https://www.youtube.com/watch?v=nzmtCFNae9k&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=12
-IterativePostorderTraversal     https://www.youtube.com/watch?v=xLQKdq0Ffjg&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=18
-ConvertBinaryTreeToItsMirror
-LowestCommonAncestor
-SerializeAndDeserializeABinaryTree
-GetLevelOfANodeInABinaryTree
-FindDistanceBetweenTwoNodesOfABinaryTree
-PrintAncestorsOfAGivenNodeInBinaryTree
-BurnABinaryTreeFromALeaf
-CountNodesInACompleteBinaryTree
-
+IterativeInorderTraversal           https://www.youtube.com/watch?v=nzmtCFNae9k&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=12
+IterativePostorderTraversal  *      https://www.youtube.com/watch?v=xLQKdq0Ffjg&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=18
+DiameterOfABinaryTree *
+LowestCommonAncestor *              https://www.youtube.com/watch?v=13m9ZCB8gjw
+SerializeAndDeserializeABinaryTree *
+FindDistanceBetweenTwoNodesOfABinaryTree *
+PrintAncestorsOfAGivenNodeInBinaryTree *
+BurnABinaryTreeFromALeaf *
+CountNodesInACompleteBinaryTree *
+==============================     geeks for geeks dsa course (https://practice.geeksforgeeks.org/batch/dsa-4/)
 
 hard, not fully understood ->
 KthAncestorOfGivenNode
 FindTheLargestCompleteSubtreeInAGivenBinaryTree
+
+
+
 
 
 

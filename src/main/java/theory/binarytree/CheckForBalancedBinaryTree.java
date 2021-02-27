@@ -11,6 +11,7 @@ public class CheckForBalancedBinaryTree {
         root.getRightNode().setLeftNode(new Node(15));
         root.getRightNode().setRightNode(new Node(20));
         System.out.println(checkForBalancedBinaryTree(root));
+
     }
 
     public static boolean checkForBalancedBinaryTree(Node root){
@@ -36,4 +37,14 @@ public class CheckForBalancedBinaryTree {
         }
         return Math.max(leftNodeHeight, rightNodeHeight) + 1;
     }
+
+    /* second solution */
+    public static int height(Node node){
+        if(node == null){
+            return 0;
+        }
+        return Math.max(height(node.getLeftNode()), height(node.getRightNode())) + 1;
+    }
+
+
 }

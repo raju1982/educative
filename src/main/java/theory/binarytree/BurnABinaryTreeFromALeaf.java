@@ -26,27 +26,27 @@ public class BurnABinaryTreeFromALeaf {
         System.out.print(res);
     }
 
-    //return height of given binary tree with root as root
-    //set the distance of current node to the given leaf if the left is descendant of root. if the leaf is not a descendant then it assign a-1 as value.
+    //return height of given binary tree with node as root
+    //set the distance of current node to the given leaf if the leaf is descendant of root. if the leaf is not a descendant then it assign -1 as value.
     private static int res=0;
-    public static int burnTime(Node root, int leaf, Distance dist){
+    public static int burnTime(Node node, int leafNodeValue, Distance dist){
 
-        if(root==null){
+        if(node==null){
             return 0;
         }
         //return height of binary tree as 1.
-        //distance of current node to the given leaf is 0.
-        if(root.getData()==leaf){
+        //distance of current node to the given leafNodeValue is 0.
+        if(node.getData()==leafNodeValue){
             dist.val=0;
             return 1;
         }
         Distance ldist=new Distance(-1);
-        int leftHeight=burnTime(root.getLeftNode(),leaf,ldist);
+        int leftHeight=burnTime(node.getLeftNode(),leafNodeValue,ldist);
         Distance rdist=new Distance(-1);
-        int rightHeight=burnTime(root.getRightNode(),leaf,rdist);
-        //check if the given leaf node is the descendant of the root node (ancestor)
+        int rightHeight=burnTime(node.getRightNode(),leafNodeValue,rdist);
+        //check if the given leafNodeValue node is the descendant of the node node (ancestor)
         if(ldist.val!=-1){
-            //distance of leaf node from 'root.getLeftNode()', so we need to add 1 to get distance from root.
+            //distance of leafNodeValue node from 'node.getLeftNode()' and left exists in the left side of node. so we need to add 1 to get distance from node.
             dist.val=ldist.val+1;
             res=Math.max(res,dist.val+rightHeight);
         }
@@ -54,7 +54,7 @@ public class BurnABinaryTreeFromALeaf {
             dist.val=rdist.val+1;
             res=Math.max(res,dist.val+leftHeight);
         }
-        //return height of the root
+        //return height of the node
         return Math.max(leftHeight,rightHeight)+1;
     }
 

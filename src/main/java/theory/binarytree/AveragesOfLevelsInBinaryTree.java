@@ -29,24 +29,22 @@ public class AveragesOfLevelsInBinaryTree {
         }
         Queue<Node> data = new LinkedList<>();
         data.add(root);
-        System.out.print(root.getData() + "\t");
         while(!data.isEmpty()){
             int size = data.size();
             double sum = 0;
             // print one level at a time
             for(int i=0; i<size; i++){
                 Node node = data.poll();
+                sum = sum + node.getData();
                 if(node.getLeftNode()!=null){
                     data.add(node.getLeftNode());
-                    sum = sum + node.getLeftNode().getData();
                 }
                 if(node.getRightNode()!=null){
                     data.add(node.getRightNode());
-                    sum = sum + node.getRightNode().getData();
                 }
             }
             if(sum!=0) {
-                System.out.print(sum / data.size() + "\t");
+                System.out.println(sum / size);
             }
         }
     }

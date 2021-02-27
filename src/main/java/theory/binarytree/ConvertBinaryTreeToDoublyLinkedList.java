@@ -6,7 +6,7 @@ package theory.binarytree;
 public class ConvertBinaryTreeToDoublyLinkedList {
     private static Node prev = null;
 
-    //doing pre-order traversal
+    //doing in-order traversal
     //time complexity O(n)
     //Auxiliary Space = height + 1 = O(h)
     public static Node BinaryTreeToDoubleLinkList(Node root){

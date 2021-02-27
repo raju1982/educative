@@ -14,6 +14,8 @@ public class IterativePostorderTraversal {
         recursivePostorder(root);
         System.out.println();
         iterativePostOrder(root);
+        System.out.println();
+
     }
 
     public static void recursivePostorder(Node node){
@@ -51,5 +53,6 @@ public class IterativePostorderTraversal {
             }
         }
     }
+
 
 }
