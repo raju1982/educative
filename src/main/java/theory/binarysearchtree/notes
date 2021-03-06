@@ -1,5 +1,62 @@
+left node will be smaller and right node will be larger.
+TreeSet and TreeMap are implementation of Self balancing binary search tree (Red Black Tree).
+TreeSet and TreeMap store data in sorted order.
+
+
+always try to create a balanced binary tree, below operation in this type of tree is O(log n)
+- Search, insert, delete or finding the closest all of these are O(h), where h is the height of binary search tree.
+- variation of closest like finding the floor, finding the celing , finding the greater or smaller value is O(h), where h is the height of binary search tree.
+
+Linked data structure like tree, binary search tree and linked list do not require resizing, however since all element are at different location they are not cache friendly.
+
+in order traversal of binary search tree is always sorted.
+
+a binary tree is binary search tree if it's in order traversal is sorted.
+
+AVL tree and Red Black Tree are Self Balancing Binary Search tree.
+
+AVL tree is a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees cannot be more than one for all nodes.
+restructuring take place during insertion and deletion of node in AVL tree.
+AVL tree search is same as binary search tree search. [search is proportional to height]
+
+
+Red Black Tree search is same as binary search tree search. [search is proportional to height]
+
+Red Black Tree rules -
+1. Every node has a color either red or black.
+2. The root of tree is always black.
+3. There are no two adjacent red nodes (A red node cannot have a red parent or red child).
+4. Every path from a node (including root) to any of its descendant NULL node has the same number of black nodes.
+
+insertion and deletion is faster in Red Black Tree, whereas search is faster in the AVL tree.[search is proportional to height]
+
+Application of self-balancing Binary Search Tree -
+    1. To maintain sorted stream of data. (or sorted set of data). you have a set of data that you want to keep sorted every movement even if the data is getting deleted.
+    2. Doubly ended priority queue. what if we want to find out the maximum item and minimum item randomly in the priority queue. 0(1) time we can get max and min. insert/delete is O(log n).
+    3. Single ended priority queue using Heap. We can find out the maximum item (max Heap) or the minimum item (min Heap).
+    4. To solve problem like ->
+        A. Count smaller greater in a stream O(logn)
+        B. Floor/Ceiling/greater/smaller in a stream O(logn)
+    5. search, insert, delete in O(logn), sorted traversal in O(n)
+
+if we have only search, insert and delete then Hashtable O(1) is preferred over self-balancing Binary Search Tree O(logn).
+
+
 //question order -
 ==============================   geeks for geeks dsa course  (https://practice.geeksforgeeks.org/batch/dsa-4/)
-
+insertNode
+searchNode
+deleteNode
+FloorAndCeilInBinarySearchTree
+TreeSetExample
+TreeMapExample
+CeilingOnLeftSideInAnArray
+KthSmallestBinarySearchTree
+CheckForBST
+FixBSTwithTwoNodesSwapped
+PairSumWithGivenBST
+VerticalSumInBinaryTree
+VerticalTraversalOfBinaryTree
+TopViewOfBinaryTree
+BottomViewOfBinaryTree
 ==============================     geeks for geeks dsa course (https://practice.geeksforgeeks.org/batch/dsa-4/)
-
