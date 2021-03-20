@@ -40,7 +40,6 @@ public class SearchNode {
     //time complexity -> O(h), where h is the height of binary search tree.
     //auxiliary space -> Iterative implementation is 0(1) it does not require auxiliary space.
     public static boolean iterativeSearch(Node node, int searchValue){
-        //if(node != null){
             while(node!=null){
                 if(node.getData()==searchValue){
                     return true;
@@ -52,7 +51,6 @@ public class SearchNode {
                     node = node.getRightNode();
                 }
             }
-        //}
         return false;
     }
 

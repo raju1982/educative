@@ -28,10 +28,10 @@ public class TreeSetExample {
         }
         System.out.println();
 
-        // Prints the largest value lower than 5
+        // Prints the largest value lower than 8
         System.out.println(data.lower(8));
 
-        //Prints the largest value lower than 5 or the value itself.
+        //Prints the largest value lower than 8 or the value itself.
         System.out.println(data.floor(8));
 
         // Prints the smallest value larger than 8
@@ -40,9 +40,9 @@ public class TreeSetExample {
         //Prints the smallest value larger than 8 or the value itself.
         System.out.println(data.ceiling(8));
 
-        //highest in the TreeSet
-        System.out.println(data.first());
         //lowest in the TreeSet
+        System.out.println(data.first());
+        //highest in the TreeSet
         System.out.println(data.last());
     }
 

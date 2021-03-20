@@ -42,6 +42,7 @@ public class KthSmallestBinarySearchTree {
         }
 
         int count = node.getLeftNodeCount()+1;
+
         if(count==k){
             return node;
         }

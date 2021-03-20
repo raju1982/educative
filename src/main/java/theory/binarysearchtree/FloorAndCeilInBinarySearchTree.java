@@ -13,7 +13,6 @@ public class FloorAndCeilInBinarySearchTree {
 
         System.out.println(floorInBinarySearchTree(node, 13).getData());
         System.out.println(CeilInBinarySearchTree(node, 13).getData());
-
     }
 
     public static boolean iterativeSearch(Node node, int val){
@@ -35,9 +34,6 @@ public class FloorAndCeilInBinarySearchTree {
     //time complexity -> O(h), where h is the height of binary search tree.
     //Iterative implementation is 0(1) it does not require auxiliary space.
     public static Node floorInBinarySearchTree(Node root, int val){
-        if(root == null){
-            return null;
-        }
         Node solution = null;
         while(root!=null){
             if(root.getData() == val){

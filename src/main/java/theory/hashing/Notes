@@ -1,0 +1,10 @@
+Intersection of two arrays
+Pair with given sum in unsorted array
+Subarray with zero sum
+Subarray with given sum
+Longest subarray with given sum
+Longest Subarray with equal number of 0s and 1s
+Longest common span with same sum in binary array
+
+hashset -> contains(search), add are constant time
+

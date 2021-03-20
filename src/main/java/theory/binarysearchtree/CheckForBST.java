@@ -23,11 +23,13 @@ public class CheckForBST {
         if (root == null)
             return true;
 
-        if(isBST(root.getLeftNode())==false){
+        if(!isBST(root.getLeftNode())){
             return false;
         }
 
-        if(root.getData()<=prev)return false;
+        if(root.getData()<=prev){
+            return false;
+        }
         prev=root.getData();
 
         return isBST(root.getRightNode());

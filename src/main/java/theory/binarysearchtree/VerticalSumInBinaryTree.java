@@ -27,14 +27,14 @@ public class VerticalSumInBinaryTree {
     }
 
     //time complexity O(n*loghd)
-    //Auxiliary Space = hd + 1 = O(h) & O(n) for hash , overall O(n) for space
-    public static void verticalSumInBinaryTree(Node node, int hd, Map<Integer, Integer> data){
+    //Auxiliary Space = horizontalDistance + 1 = O(h) & O(n) for hash , overall O(n) for space
+    public static void verticalSumInBinaryTree(Node node, int horizontalDistance, Map<Integer, Integer> data){
         if(node==null){
             return;
         }
-        verticalSumInBinaryTree(node.getLeftNode(),hd-1, data);
-        int tmpVal = data.get(hd) == null ? 0 : data.get(hd);
-        data.put(hd, tmpVal+node.getData());
-        verticalSumInBinaryTree(node.getRightNode(),hd+1, data);
+        verticalSumInBinaryTree(node.getLeftNode(),horizontalDistance-1, data);
+        int tmpVal = data.get(horizontalDistance) == null ? 0 : data.get(horizontalDistance);
+        data.put(horizontalDistance, tmpVal+node.getData());
+        verticalSumInBinaryTree(node.getRightNode(),horizontalDistance+1, data);
     }
 }

@@ -37,24 +37,24 @@ Application of self-balancing Binary Search Tree -
     4. To solve problem like ->
         A. Count smaller greater in a stream O(logn)
         B. Floor/Ceiling/greater/smaller in a stream O(logn)
-    5. search, insert, delete in O(logn), sorted traversal in O(n)
+    5. search, insert, delete in O(logn), sorted traversal/in order traversal in O(n)
 
 if we have only search, insert and delete then Hashtable O(1) is preferred over self-balancing Binary Search Tree O(logn).
 
 
 //question order -
 ==============================   geeks for geeks dsa course  (https://practice.geeksforgeeks.org/batch/dsa-4/)
-insertNode
-searchNode
-deleteNode
-FloorAndCeilInBinarySearchTree
+insertNode *
+searchNode *
+deleteNode *
+FloorAndCeilInBinarySearchTree *
 TreeSetExample
 TreeMapExample
 CeilingOnLeftSideInAnArray
-KthSmallestBinarySearchTree
-CheckForBST
-FixBSTwithTwoNodesSwapped
-PairSumWithGivenBST
+KthSmallestBinarySearchTree *
+CheckForBST *
+FixBSTwithTwoNodesSwapped *
+PairSumWithGivenBST *
 VerticalSumInBinaryTree
 VerticalTraversalOfBinaryTree
 TopViewOfBinaryTree
