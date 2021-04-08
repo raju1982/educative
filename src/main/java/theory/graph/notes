@@ -1,0 +1,75 @@
+A Graph is a data structure that consists of the following two components:
+A finite set of vertices also called nodes.
+A finite set of ordered pair of the form (u, v) called as edge.
+The pair is ordered because (u, v) is not the same as (v, u) in case of a directed graph(digraph).
+The pair of the form (u, v) indicates that there is an edge from vertex u to vertex v.
+The edges may contain weight/value/cost.
+
+
+Breadth First Search -
+O(V+E)
+
+undirected graph represent a social network.
+using BFS we can print all people that can be reached using a person (vertex) through any number of friends, basically the network.
+using BFS we can print the network in an ordered way. first your connection then your connections connections.
+
+Webcrawler is a very important application of the Breadth-First Search Algorithm.
+The idea is that the whole internet can be represented by a directed graph:
+with vertices -> Domains/ URLs/ Websites.
+edges -> Connections.
+
+
+Application of BFS -
+1. Shortest path in an undirected graph
+2. Webcrawler in search engine
+3. Peer to Peer network (bittorrent) [search among your neighbors and then their neighbors]
+4. Social networking search (searching for a person, first name of person who is your friend and then who is your friends friends)
+5. In garbage collection (????)
+6. Cycle detection in undirected and directed graph
+7. Ford Fulkerson algorithm
+8. Broadcasting
+
+
+Application of Depth First Search -
+O(V+E)
+
+1. Cycle detection (directed graph)
+2. Topological sorting
+3. Strongly connected components
+4. Solving maze and similar puzzle
+5. Path finding
+
+
+
+
+Questions -
+
+1. Adjacency List presentation of Undirected Graphs
+2. undirected graph and a source vertex 's' ,print B.F.S. from given source.
+3. B.F.S on disconnected graphs. (no source is given) [Webcrawler of entire web]
+4. Print number of islands in a graph (or number of connected components in a graph).
+5. Depth First Search (undirected and connected graph, we also have a source)
+6. Depth First Search For Disconnected Graphs
+7. For finding connected components in undirected graph
+8. Shortest Path in an Unweighted and undirected Graph (Given an Unweighted Graph and a source point, the task is to find the shortest path between the source point and every other point in the graph.)
+9. Detect Cycle in Undirected Graph (BFS & DFS)
+10. DetectCycleInDirectedGraph
+11. Topological Sorting (Kahn's BFS Based Algortihm)
+12. Detection of a Cycle in an Directed Graph using Kahn's algorithm. (DetectCycleInDirectedGraphUsingKahnAlgo)
+13. Topological Sorting (DFS Based)
+14. Given a sorted dictionary of an alien language, find order of characters
+[https://www.geeksforgeeks.org/given-sorted-dictionary-find-precedence-characters/
+https://github.com/eMahtab/alien-dictionary
+https://www.youtube.com/watch?v=LA0X_N-dEsg]
+15. Shortest Path in Weighted Directed Acyclic Graph (Topological Sort)
+16. Bellman Ford Shortest Path Algorithm [directed, connected, negative weight edge graph]
+17. Detect negative cycle using Bellman Ford
+18. Bellman Ford Shortest Path Algorithm for unconnected graph
+18. currency-arbitrage -> https://medium.com/@anilpai/currency-arbitrage-using-bellman-ford-algorithm-8938dcea56ea
+
+[not understood]
+1. Prim's Algorithm/Minimum Spanning Tree [weighted, undirected, connected graph]
+A minimum spanning tree (MST) is a weighted, undirected, connected graph whose total edge weight has been minimized by removing heavier edges.
+2. Dijkstra's Algorithm (weighted, undirected/directed graph, may contain cycle) []
+
+
