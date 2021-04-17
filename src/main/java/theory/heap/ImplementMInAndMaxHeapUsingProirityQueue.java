@@ -14,12 +14,16 @@ For the retrieval methods, it has constant time complexity
 public class ImplementMInAndMaxHeapUsingProirityQueue {
 
     public static void main(String[] args) {
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(10, new Comparator<Integer>() {
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>((a, b) -> b - a);
+
+        /*
+                PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(10, new Comparator<Integer>() {
             @Override
             public int compare(Integer a, Integer b) {
                 return b - a;
             }
         });
+         */
 
 
         PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
@@ -34,11 +38,13 @@ public class ImplementMInAndMaxHeapUsingProirityQueue {
         System.out.println("Min heap:");
 
         while (minHeap.size() != 0) {
+            System.out.print(minHeap.peek() + " ");
             System.out.print(minHeap.poll() + " ");
         }
 
-        System.out.println("Max heap:");
+        System.out.println("\nMax heap:");
         while (maxHeap.size() != 0) {
+            System.out.print(maxHeap.peek() + " ");
             System.out.print(maxHeap.poll() + " ");
         }
     }

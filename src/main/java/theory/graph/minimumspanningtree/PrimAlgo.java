@@ -1,4 +1,4 @@
-package theory.graph;
+package theory.graph.minimumspanningtree;
 
 import java.util.Arrays;
 

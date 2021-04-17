@@ -17,19 +17,19 @@ public class DepthFirstSearchForDisconnectedGraphs {
         System.out.print(s +" ");
 
         for(int u:adj.get(s)){
-            if(visited[u]==false)
-                DFSRec(adj,u,visited);
+            if(!visited[u]) {
+                DFSRec(adj, u, visited);
+            }
         }
     }
 
     static void DFS(List<ArrayList<Integer>> adj, int V){
         boolean[] visited=new boolean[V];
-        for(int i = 0; i<V; i++)
-            visited[i] = false;
 
         for(int i=0;i<V;i++){
-            if(visited[i]==false)
-                DFSRec(adj,i,visited);
+            if(!visited[i]) {
+                DFSRec(adj, i, visited);
+            }
         }
     }
 

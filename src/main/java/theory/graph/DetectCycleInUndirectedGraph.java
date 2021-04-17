@@ -79,7 +79,6 @@ public class DetectCycleInUndirectedGraph {
         return false;
     }
 
-
     public static void main(String[] args){
         int nodeCount = 7;
         List<ArrayList<Integer>> graph = new ArrayList<>(nodeCount);

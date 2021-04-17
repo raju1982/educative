@@ -16,8 +16,10 @@ public class DisconnectedGraphsBFS {
         boolean[] visited=new boolean[V];
 
         for(int i=0;i<V;i++){
-            if(visited[i]==false)
-                BFS(adj,i,visited);
+            if(visited[i]==false) {
+                BFS(adj, i, visited);
+                System.out.println();
+            }
         }
     }
 
@@ -52,12 +54,11 @@ public class DisconnectedGraphsBFS {
 
         // Adding edges one by one
         addEdge(adj,0,1);
-        addEdge(adj,0,2);
-        addEdge(adj,2,3);
-        addEdge(adj,1,3);
-        addEdge(adj,4,5);
+        addEdge(adj,1,2);
+        addEdge(adj,3,4);
+        addEdge(adj,5,3);
         addEdge(adj,5,6);
-        addEdge(adj,4,6);
+        addEdge(adj,3,6);
 
         BFSDin(adj,V);
     }

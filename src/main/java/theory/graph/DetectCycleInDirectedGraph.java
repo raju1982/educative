@@ -3,12 +3,12 @@ package theory.graph;
 import java.util.List;
 import java .util.ArrayList;
 
+//O(V+E), which we already know is the complexity of traversing the adjacency list that represents our graph.
 public class DetectCycleInDirectedGraph {
 
     public static void addEdge(List<ArrayList<Integer>> graph, int startIndex, int endIndex){
         graph.get(startIndex).add(endIndex);
     }
-
 
     public static boolean dfs(List<ArrayList<Integer>> graph, int noOfNodes){
         boolean[] visited = new boolean[noOfNodes];
@@ -55,12 +55,6 @@ public class DetectCycleInDirectedGraph {
         addEdge(graph, 1, 2);
         addEdge(graph, 2, 3);
         addEdge(graph, 3, 1);
-
-        //2nd graph
-        /*addEdge(graph, 0, 1);
-        addEdge(graph, 1, 3);
-        addEdge(graph, 2, 1);
-        addEdge(graph, 2, 3);*/
 
         System.out.println(dfs(graph, noOfNodes));
     }

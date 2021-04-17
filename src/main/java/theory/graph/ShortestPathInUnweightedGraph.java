@@ -29,13 +29,13 @@ public class ShortestPathInUnweightedGraph {
         }
     }
 
-    public static int[] solution(List<ArrayList<Integer>> graph, int startPoint, int nodeCount){
-        int[] result = new int[nodeCount];
+    public static int[] solution(List<ArrayList<Integer>> graph, int startPoint){
+        int[] result = new int[graph.size()];
         Arrays.fill(result, Integer.MAX_VALUE);
 
         result[startPoint] = 0;
 
-        boolean[] visited = new boolean[nodeCount];
+        boolean[] visited = new boolean[graph.size()];
 
         Queue<Integer> data = new LinkedList<>();
         data.add(startPoint);
@@ -71,7 +71,7 @@ public class ShortestPathInUnweightedGraph {
 
         bfs(graph, 0, nodeCount);
         System.out.println();
-        System.out.println(Arrays.toString(solution(graph, 0, nodeCount)));
+        System.out.println(Arrays.toString(solution(graph, 0)));
     }
 
 }

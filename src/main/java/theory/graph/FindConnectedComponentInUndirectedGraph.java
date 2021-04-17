@@ -25,8 +25,6 @@ public class FindConnectedComponentInUndirectedGraph {
     static int DFS(List<ArrayList<Integer>> adj, int V){
         boolean[] visited=new boolean[V];
         int count = 0;
-        for(int i = 0; i<V; i++)
-            visited[i] = false;
 
         for(int i=0;i<V;i++){
             if(visited[i]==false) {

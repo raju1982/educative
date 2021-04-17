@@ -1,0 +1,27 @@
+Binary heap is a completed Binary tree. They are stored as an array (without any gaps, with proper parent child relationship.)
+left child(i) = 2i+1
+right child(i) = 2i+2
+Parent (i)  = (i-1)/2
+
+Min heap :-
+complete binary tree
+every node has value small than it's descendants.
+stored as an array
+
+Arrays.sort -> O(n log n)
+Insertion [add()]/remove [Poll()]: It has O(log(n)) time complexity.
+peek() min/max, size(): It has O(1) time complexity.
+Search/contains(Object) :      O(N)
+
+1. Sort an array that is already k-sorted.
+2. Buying the maximum items with a given sum.
+3. Calculate the K Largest Elements in an unsorted array
+4. K Closest Elements
+5. Merge K Sorted Arrays
+6. Find Median of a Stream
+Educative.io
+Design a class to calculate the median of a number stream. The class should have the following two methods:
+insertNum(int num): stores the number in the class
+findMedian(): returns the median of all numbers inserted in the class
+
+7.Given an array of numbers and a number ‘k’, find the median of all the ‘k’ sized sub-arrays (or windows) of the array.

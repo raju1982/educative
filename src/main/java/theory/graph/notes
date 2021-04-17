@@ -45,31 +45,70 @@ O(V+E)
 Questions -
 
 1. Adjacency List presentation of Undirected Graphs
-2. undirected graph and a source vertex 's' ,print B.F.S. from given source.
-3. B.F.S on disconnected graphs. (no source is given) [Webcrawler of entire web]
-4. Print number of islands in a graph (or number of connected components in a graph).
-5. Depth First Search (undirected and connected graph, we also have a source)
-6. Depth First Search For Disconnected Graphs
-7. For finding connected components in undirected graph
-8. Shortest Path in an Unweighted and undirected Graph (Given an Unweighted Graph and a source point, the task is to find the shortest path between the source point and every other point in the graph.)
-9. Detect Cycle in Undirected Graph (BFS & DFS)
-10. DetectCycleInDirectedGraph
-11. Topological Sorting (Kahn's BFS Based Algortihm)
-12. Detection of a Cycle in an Directed Graph using Kahn's algorithm. (DetectCycleInDirectedGraphUsingKahnAlgo)
-13. Topological Sorting (DFS Based)
-14. Given a sorted dictionary of an alien language, find order of characters
-[https://www.geeksforgeeks.org/given-sorted-dictionary-find-precedence-characters/
-https://github.com/eMahtab/alien-dictionary
-https://www.youtube.com/watch?v=LA0X_N-dEsg]
-15. Shortest Path in Weighted Directed Acyclic Graph (Topological Sort)
-16. Bellman Ford Shortest Path Algorithm [directed, connected, negative weight edge graph]
-17. Detect negative cycle using Bellman Ford
-18. Bellman Ford Shortest Path Algorithm for unconnected graph
-18. currency-arbitrage -> https://medium.com/@anilpai/currency-arbitrage-using-bellman-ford-algorithm-8938dcea56ea
+2. Count the number of Edges in an Undirected Graph
+3. Print the Transpose of a Graph
+3. undirected graph and a source vertex 's' ,print B.F.S. from given source.
+4. B.F.S on disconnected graphs. (no source is given) [Webcrawler of entire web]
+5. Print number of islands in a graph (or number of connected components in a graph).
+6. Depth First Search (undirected and connected graph, we also have a source)
+7. Depth First Search For Disconnected Graphs
+8. Check if a Path Exists Between Two Vertices in a directed graph(PathExistsBetweenTwoVertices)
+9. Check if a Directed Graph is Tree or not (ISDirectedGraphATree)
+        A graph could only be a tree under the conditions stated below:
+            Each node, except root, has exactly one parent
+            There are no cycles
+            Graph is connected
+9. Calculate the Number of Nodes in a Given Graph Level
+9. Count the Paths Between Two Nodes
+10. Check if a Given Graph is Bipartite
+10. CloneUndirectedGraph or CloneDirectedGraph (solution works for both)
+10. finding connected components in undirected graph -
+    https://www.geeksforgeeks.org/connected-components-in-an-undirected-graph/
+    https://www.geeksforgeeks.org/program-to-count-number-of-connected-components-in-an-undirected-graph/
+11. Shortest Path in an Unweighted and undirected Graph (Given an Unweighted Graph and a source point, the task is to find the shortest path between the source point and every other point in the graph.)
+12. Find Length of Shortest Path between Two Vertices in Unweighted and undirected Graph. [break as soon as the destination vertex is reached.]
+13. Detect Cycle in Undirected Graph (BFS & DFS)
+14. DetectCycleInDirectedGraph
+15. Find Mother Vertex" in a Directed Graph  [https://www.geeksforgeeks.org/find-a-mother-vertex-in-a-graph/]
+16. Topological Sorting (Kahn's BFS Based Algortihm)
+17. Detection of a Cycle in an Directed Graph using Kahn's algorithm. (DetectCycleInDirectedGraphUsingKahnAlgo)
+18. Topological Sorting (DFS Based)
 
-[not understood]
+Topological Sort Question -
+There are ‘N’ tasks, labeled from ‘0’ to ‘N-1’. Each task can have some prerequisite tasks which need
+to be completed before it can be scheduled.
+Given the number of tasks and a list of prerequisite pairs,
+find out if it is possible to schedule all the tasks.
+or
+Given the number of tasks and a list of prerequisite pairs, write a method to find the ordering of tasks
+we should pick to finish all tasks.
+
+Course Schedule: There are ‘N’ courses, labeled from ‘0’ to ‘N-1’.
+Each course can have some prerequisite courses which need to be completed before it can be taken.
+Given the number of courses and a list of prerequisite pairs, find if it is possible for a student
+to take all the courses.
+or
+Given the number of courses and a list of prerequisite pairs, write a method to find the best ordering
+of the courses that a student can take in order to finish all courses.
+
+19. Given a sorted dictionary of an alien language, find order of characters [Alien Dictionary]
+20. Shortest Path in Weighted Directed Acyclic Graph (Topological Sort)
+21. Bellman Ford Shortest Path Algorithm [directed, connected, negative weight edge graph]
+22. Detect negative cycle using Bellman Ford
+23. Bellman Ford Shortest Path Algorithm for unconnected graph
+24. Figure out whether the given words can form a circular chain.
+24. currency-arbitrage -> https://medium.com/@anilpai/currency-arbitrage-using-bellman-ford-algorithm-8938dcea56ea
+25. Check if a Graph is Strongly Connected
+26. Print Strongly Connected Components in Graph ()
+
+
+
+[****not understood***]
 1. Prim's Algorithm/Minimum Spanning Tree [weighted, undirected, connected graph]
 A minimum spanning tree (MST) is a weighted, undirected, connected graph whose total edge weight has been minimized by removing heavier edges.
+https://algorithms.tutorialhorizon.com/prims-minimum-spanning-tree-mst-using-adjacency-list-and-priority-queue-without-decrease-key-in-oelogv/
+https://www.geeksforgeeks.org/prims-mst-for-adjacency-list-representation-greedy-algo-6/
 2. Dijkstra's Algorithm (weighted, undirected/directed graph, may contain cycle) []
-
-
+3. All Tasks Scheduling Orders
+//We can use a recursive approach with Backtracking to consider all sources at any step.
+https://www.educative.io/module/lesson/data-structures-in-java/q2DpKlWR49r
