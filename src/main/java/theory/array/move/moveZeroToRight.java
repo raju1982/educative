@@ -1,10 +1,10 @@
-package array.rotate_rearrange_reorder;
+package theory.array.move;
 
 import java.util.Arrays;
 
-public class moveZeroToRIght {
+public class moveZeroToRight {
     public static void solution(int[] input){
-        //illegalArgumentExcpetion -> null, input.length == 0
+        //illegalArgumentException -> null, input.length == 0
         int readIndex=0;
         int writeIndex=0;
 
@@ -15,7 +15,6 @@ public class moveZeroToRIght {
             }
             readIndex++;
         }
-
     }
 
     public static void swap(int i, int j, int[] input){

@@ -3,6 +3,9 @@ package theory.array;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
+
+//time complexity 0(nlog(n)) due to sorting
+//space complexity 0(n) -> Array stores the times
 public class LaptopRentals {
 
     static int solution(List<List<Integer>> data){

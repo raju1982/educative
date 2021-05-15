@@ -1,4 +1,4 @@
-package com.ds.algo.array;
+package theory.array.rotate;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,12 +14,12 @@ public class RightRotateArrayGeneric {
 
         num = num%input.length;
 
-        everse(input, 0, input.length-1);
-        everse(input, 0, num-1);
-        everse(input, num, input.length-1);
+        reverse(input, 0, input.length-1);
+        reverse(input, 0, num-1);
+        reverse(input, num, input.length-1);
     }
 
-    public static void everse(int[] input, int min, int max){
+    public static void reverse(int[] input, int min, int max){
         while(min<max){
             swap(min, max, input);
             min++;
@@ -37,6 +37,12 @@ public class RightRotateArrayGeneric {
         int[] input = new int[]{1,2,3,4,5,6};
         rotate(input, 3);
         System.out.println(Arrays.toString(input));
+
+        int[] input1 = new int[]{1,2,3,4,5,6};
+        rotate(input1, -2);
+        System.out.println(Arrays.toString(input1));
+        //{1,2,3,4,5,6}
+        //[3,4,5,6,1,2]
     }
 }
 

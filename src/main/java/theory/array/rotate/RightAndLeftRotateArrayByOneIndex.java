@@ -1,4 +1,4 @@
-package com.ds.algo.array;
+package theory.array.rotate;
 
 import java.util.Arrays;
 

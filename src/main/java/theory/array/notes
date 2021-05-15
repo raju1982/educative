@@ -1,2 +1,57 @@
-SingleCycleCheck [https://www.algoexpert.io/questions/Single%20Cycle%20Check]
-LaptopRentals [https://www.algoexpert.io/questions/Laptop%20Rentals]
+Check if an Array is Sorted                                     [https://practice.geeksforgeeks.org/batch/dsa-4/]
+Reverse an Array                                                [https://practice.geeksforgeeks.org/batch/dsa-4/]
+
+Move -
+    move Zero To Right or end ***                               [https://practice.geeksforgeeks.org/batch/dsa-4/]
+    move Zero To Left
+
+Remove duplicates from a sorted array ***                       [https://practice.geeksforgeeks.org/batch/dsa-4/]
+Remove Duplicate From Unsorted Array
+Remove Even Integers From Unsorted Array
+Leaders in an Array problem - An element is called the leader of an array if there is no element greater than it on the right side.         [https://practice.geeksforgeeks.org/batch/dsa-4/]
+Maximum Difference Problem with Order - Maximum Difference problem is to find the maximum of arr[j] - arr[i] where j>i.                     [https://practice.geeksforgeeks.org/batch/dsa-4/]
+Frequencies in a Sorted Array
+Stock Buy and Sell Problem
+Trapping Rain Water
+Find count of maximum consecutive 1s in a binary array.
+Largest And Smallest Sum Subarray
+Find the length of the longest subarray that has alternating even odd elements.
+
+
+Rotate -
+    Rotate an Array by D places
+
+Search -
+    Binary Search
+
+Sort -
+    QuickSort -
+    best case O(nlogn) , worst case O(N^2)
+    do not use quicksort for almost sorted list, it will perform bad - O (n^2)
+
+
+
+
+
+
+
+SingleCycleCheck                    [https://www.algoexpert.io/questions/Single%20Cycle%20Check]
+LaptopRentals                       [https://www.algoexpert.io/questions/Laptop%20Rentals]
+
+
+
+
+
+
+
+Re-arrange number means quicksort with correct pivot. *****
+Kth smallest and largest element using PriorityQueue/Heap/ModifiedQuickSelect  ******
+
+
+tricks -
+//read and write pointer
+//can we parse the array from end
+//while parsing array in one direction what all we need to keep track off (minvalue, maxValue etc ...)
+//multiple times parsing the array in one direction, each time storing some important information in array of same length [int[] leftMax = new int[input.length]; int[] rightMax = new int[input.length];]
+
+

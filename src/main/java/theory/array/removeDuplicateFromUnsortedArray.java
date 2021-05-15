@@ -1,4 +1,4 @@
-package array.remove;
+package theory.array;
 
 import java.util.Set;
 import java.util.HashSet;

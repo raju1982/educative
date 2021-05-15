@@ -11,7 +11,6 @@ public class SingleCycleCheck {
                 return false;
             }
             startIndex = newIndex(input, startIndex);
-            System.out.print(startIndex + "\t");
             visitedIndexCount++;
         }
 
