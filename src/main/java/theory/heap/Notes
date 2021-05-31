@@ -16,8 +16,8 @@ Search/contains(Object) :      O(N)
 1. Sort an array that is already k-sorted.
 2. Buying the maximum items with a given sum.
 3. Calculate the K Largest Elements in an unsorted array
-4. K Closest Elements
-5. Merge K Sorted Arrays
+4. K Closest Elements       **** [do this again and again]
+5. Merge K Sorted Arrays    **** [do this again and again]
 6. Find Median of a Stream
 Educative.io
 Design a class to calculate the median of a number stream. The class should have the following two methods:

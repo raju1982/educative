@@ -16,22 +16,52 @@ Trapping Rain Water
 Find count of maximum consecutive 1s in a binary array.
 Largest And Smallest Sum Subarray
 Find the length of the longest subarray that has alternating even odd elements.
+Find maximum circular sum subarray of a given array.
+Find index of Majority element in an Array. It's an element that appears more than n/2 times in an array of size n
+Given a binary array, we need to find the minimum of number of group flips to make all array elements same.  In a group flip, we can flip any set of consecutive 1s or 0s.
+Maximum Sum of K Consecutive elements in an Array
+Subarray With Given Sum [hasing -> geeksforgeeks]
+Given an unsorted array of non negative integers. Find if there is a subarray with given sum.
+N-bonacci numbers [variation of fibonacci]
+Given a fixed array and multiple queries (), find out how to perf queries in a efficient manner
+Find Equilibrium Point in an array (sum of element on left side = sum of element on left side)
 
+Search -
+    Binary Search
+    Binary Search Iterative
+    Index of first Occurrence in Sorted
+    Index of last Occurrence in Sorted
+    Given a sorted array and an element x, we need to count occurrences of x in the array.
+    Given a sorted binary array, we need to count 1s in this array.
+    Given an infinite sized array, we need to write an efficient solution to search an element.
+    Search In Rotated Array ***
+    Find pair in unsorted array which gives sum X
+    Find pair in sorted array which gives sum X
+    Find triplet in an sorted array which gives sum X
+    Find triplet in an unsorted array which gives sum X
+    Allocate Minimum Pages  https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/  [write code********]
+
+Majority element is an element that appears more than n/2 times in an array of size n.
+Median of two sorted arrays
+RepeatingElement [write code********]
+
+Sort -
+    Merge Two Sorted Arrays
+    Intersection of two sorted arrays (no duplicates)
+    Union of two sorted array (no duplicates)
 
 Rotate -
     Rotate an Array by D places
 
-Search -
-    Binary Search
 
 Sort -
     QuickSort -
     best case O(nlogn) , worst case O(N^2)
     do not use quicksort for almost sorted list, it will perform bad - O (n^2)
-
-
-
-
+    Chocolate Distribution Problem [write code********]
+    Sort an Array with two types of elements    [Segregate negative and positive elements. Segregate even and odd elements. Sort a binary array.] [write code********]
+    overlapping the merged intervals.  [write code********]
+    Meeting the maximum guests [write code********]
 
 
 
@@ -44,14 +74,122 @@ LaptopRentals                       [https://www.algoexpert.io/questions/Laptop%
 
 
 
-Re-arrange number means quicksort with correct pivot. *****
+
+
+
+
 Kth smallest and largest element using PriorityQueue/Heap/ModifiedQuickSelect  ******
 
 
-tricks -
+
+
+
+Tricks Array -
 //read and write pointer
 //can we parse the array from end
 //while parsing array in one direction what all we need to keep track off (minvalue, maxValue etc ...)
 //multiple times parsing the array in one direction, each time storing some important information in array of same length [int[] leftMax = new int[input.length]; int[] rightMax = new int[input.length];]
+//sliding window
+//prefix sum stored in hashset, then search for [prefix_sum= total_sum-sum] in the hashset
+//hashset + sliding window
+//hashmap + sliding window
+//can we sort array and have two pointers one at start and one at end
+
+//if array is sorted you can apply binary search -> first occurrence, last occurrence, count, etc ...
+//can you use two pointers one from start and one from end and do some math like finding sum
+
+Quick sort - // **** kth largest element is equivalent to find (n - k)th smallest element in array.
+Re-arrange number means quicksort with correct pivot. *****
+
+*****Good questions***** -
+Overlapping the merged intervals.  [write code********]  [geeksforgeeks]
+Meeting the maximum guests [write code********]
+threeNumberSum  [AlgoExpert]
+smallestDifference  [AlgoExpert]
+isMonotonic [AlgoExpert]
+
+
+
+
+
+String Tricks -
+charAt(i) , toCharArray(), String.length(), String.valueOf(charArray)
+input = input.toLowerCase();
+int[] data = new int[26]; or CHAR=256, no need to subtract 97
+Arrays.fill(data, -1);
+int index = input.charAt(i)-97;
+answer = str.substring(i, j+1);
+//reduce string length
+currentWord.setLength(currentWord.length() - 1);
+
+conversion -
+// ArrayList to Array Conversion
+int[] arr = al.stream().mapToInt(i -> i).toArray();
+//convert List to Array
+Integer[] arr = new Integer[al.size()];
+arr = al.toArray(arr);
+//convert Integer Array to List
+Arrays.stream(arr).collect(Collectors.toList());
+PriorityQueue<Integer> queue = new PriorityQueue<>(10, Collections.reverseOrder());
+List<Integer> intList = Arrays.asList(1, 2, 3);
+
+
+
+
+
+
+//don't forget the basic case
+if(input.length<3){ return true;}
+array/object as null
+empty array/string ....
+IllegalArgumentException()
+
+
+//clone, comparator and comparable-
+clone an array
+use comparator -> lambda
+comparable
+Arrays.sort(tmp, Collections.reverseOrder()); [works on object only]
+clone list -> new ArrayList<>(osf)
+private static PriorityQueue<Pair> results = new PriorityQueue<>((a, b) -> b.aValue - a.aValue);
+
+
+//import
+import java.util.*;
+import java.lang.*;
+
+
+
+
+
+
+
+write code for -
+longestPeak [AlgoExpert]
+spiral traverse [AlgoExpert]
+nonConstructibleChange [AlgoExpert]
+sortedSquaredArray
+K Closest Elements       **** [do this again and again]
+Merge K Sorted Arrays    **** [do this again and again]
+
+
+
+Exception handling -
+try {} catch {} finally {}
+catch null pointer exception -> Objects.isNull() Objects.isNotNull()
+throw new IllegalArgumentException("invalid data"); for invalid data
+
+//create custom exception & error ->
+
+method throws exception
+https://www.baeldung.com/java-new-custom-exception
+https://www.baeldung.com/java-exceptions-interview-questions
+https://howtodoinjava.com/testng/testng-expected-exception/
+https://dzone.com/articles/java-exception-handling-interview-questions-and-an-1
+
+
+
+
+
 
 

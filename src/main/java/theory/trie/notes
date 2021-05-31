@@ -1,0 +1,12 @@
+Well suited for implementing the dictionary(set of words)
+1. Insert(String): Inserts a string into the trie.
+2. Delete(String): Deletes an existing string from the trie.
+3. Search(String): Searches if the input string exists as a complete word in the trie
+2. prefixSearch(String): Searches if the prefix string exists in the trie.
+3. lexicographic ordering of words in the dictionary.
+
+questions -
+1. Count Distinct Rows in a Binary Matrix
+2. Given an input string and a dictionary of words, find out if the input string can be segmented into a space-separated sequence of dictionary words.
+
+

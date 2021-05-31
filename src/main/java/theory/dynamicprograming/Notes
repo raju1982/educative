@@ -1,0 +1,33 @@
+Bottom up is iterative (Tabulation)
+Single pass generally
+Can save some space with
+
+
+Top down is recursive (memoization)
+Double pass generally
+
+Questiosn -
+Fibonnacci
+https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
+House Robber  [https://leetcode.com/problems/house-robber/]
+https://www.codechef.com/UADPIP01/problems/BLJUMP
+https://www.geeksforgeeks.org/min-number-of-operations-to-reduce-n-to-0-by-subtracting-any-digits-from-n/
+https://www.geeksforgeeks.org/coin-change-dp-7/
+
+
+
+how to identify DP problems ->
+do we have choices ->  we can pick items or not pick the item
+optimization -> max, min, largest, smallest
+
+DP array size is always the size of changing variable + 1
+
+
+
+
+
+
+//how to fill dp array
+        for(int i=0; i<memo.length; i++) {
+            Arrays.fill(memo[i], -1);
+        }

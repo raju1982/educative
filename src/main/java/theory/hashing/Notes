@@ -1,10 +1,15 @@
-Intersection of two arrays
-Pair with given sum in unsorted array
-Subarray with zero sum
-Subarray with given sum
-Longest subarray with given sum
-Longest Subarray with equal number of 0s and 1s
-Longest common span with same sum in binary array
+Hashset -> contains(search), add and remove are constant time 0(1) [on average]
+        -> size, isEmpty()  are constant time 0(1) in worst case
 
-hashset -> contains(search), add are constant time
+HashMap ->
+put, containsKey, remove are constant time 0(1) [on average]
+get is also constant time 0(1)
+size, isEmpty()  are constant time 0(1) in worst case
 
+Questions ->
+1. Intersection of two arrays
+2. Pair with given sum in unsorted array
+3. Subarray with zero sum
+4. Longest Subarray with equal number of 0s and 1s [https://practice.geeksforgeeks.org/tracks/DSASP-Hashing/?batchId=154]
+largestZeroSubarray
+5. Subarray with given sum

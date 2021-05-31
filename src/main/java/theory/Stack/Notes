@@ -1,0 +1,14 @@
+//Deque<Character> s=new ArrayDeque<>();
+
+good questions -
+BalancedParenthesis
+Stock span problem [write code ** geeks for geeks ***]
+Given an array of distinct integers, find the closest (positive wise) greater on left of every element. If there is no greater element on l;eft, then print -1
+Largest Rectangular Area in a Histogram *** TO hard **** [** geeks for geeks ***]
+Largest Rectangle with all 1's *** TO hard **** [** geeks for geeks ***]
+
+
+Tricks -
+Stock span problem [write code ** geeks for geeks ***]
+when you have to go through previous elements and process them in last in first out fashion try using stack
+

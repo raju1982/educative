@@ -1,20 +1,28 @@
 Non linear data structure
 Tree Data Structure is used to organise data in hierarchical manner
 
-===================
-Binary tree - degree of node can be at most 2
 
-traversal -
-Breadth First (OR Level Order)  root node -> left to right all child ->
-Depth First -
-    inorder   (Left Root Right)
-    preorder  (Root Left Right)
-    postorder (Left Right Root)
+==============
+height for all leaf node is zero or 1.
+height of a node is the max height from all the leaf node.
+
+depth of root is zero
+level = depth + 1
+
+max no.of child a binary tree can have is 2
 
 Complete Binary Tree: A Binary Tree is a Complete Binary Tree if all the levels are completely filled except possibly the last level and the last level has to be filled left to right.
 Perfect Binary Tree A Binary tree is a Perfect Binary Tree in which all the internal nodes have two children and all leaf nodes are at the same level.
 
+Depth First traversal -
+    preorder  (Node Left Right)
+    inorder   (Left Node Right)
+    postorder (Left Right Node)
 
+Breadth First / Level Order Traversal -> left to right at each level (start from root)
+
+
+==============
 
 //question order -
 ==============================   geeks for geeks dsa course  (https://practice.geeksforgeeks.org/batch/dsa-4/)
@@ -23,7 +31,7 @@ HeightOfBinaryTree
 PrintNodesAtKDistance
 SumOFEachBranch
 LevelOrderTraversal
-LevelOrderTraversalLineByLine
+LevelOrderTraversalLineByLine [good]
 ReverseLevelOrderTraversalBinaryTree         https://www.youtube.com/watch?v=D2bIbWGgvzI&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=14
 SizeOfBinaryTree
 GetLevelOfANodeInABinaryTree *
