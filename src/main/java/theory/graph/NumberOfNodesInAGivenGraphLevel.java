@@ -12,18 +12,21 @@ public class NumberOfNodesInAGivenGraphLevel {
         graph.get(destination).add(source);
     }
 
-    public static int bfs(List<ArrayList<Integer>> graph, int startVertex, int level){
+    public static int bfs(List<ArrayList<Integer>> graph, int startVertex, int finalLevel){
         Queue<Integer> queue = new LinkedList<>();
-        int[] visited = new int[graph.size()];
+        boolean[] visited = new boolean[graph.size()];
+        int[] level = new int[graph.size()];
+
         queue.add(startVertex);
-        visited[startVertex] = 1;
+        visited[startVertex] = true;
+        level[startVertex] = 1;
 
         while(!queue.isEmpty()){
             int tmp = queue.poll();
             for(int i:graph.get(tmp)){
-                if(visited[i]!=1){
-                    visited[i] = visited[tmp] + 1;
-                    if(visited[i]<level){
+                if(!visited[i]){
+                    level[i] = level[tmp] + 1;
+                    if(level[i]<=finalLevel){
                         queue.add(i);
                     }
                 }
@@ -31,7 +34,7 @@ public class NumberOfNodesInAGivenGraphLevel {
         }
         int count = 0;
         for(int i=0; i<visited.length; i++){
-            if(visited[i]==level){
+            if(level[i]==finalLevel){
                 System.out.print(i + "\t");
                 count++;
             }

@@ -2,25 +2,65 @@ Bottom up is iterative (Tabulation)
 Single pass generally
 Can save some space with
 
-
 Top down is recursive (memoization)
 Double pass generally
 
+https://www.youtube.com/watch?v=-GtpxG6l_Mc&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=10
+
 Questiosn -
-Fibonnacci
-https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
+Pattern 1-
+https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/ [find out the maximum value subset of val[] such that sum of the weights of this subset is smaller than or equal to W]
+https://www.geeksforgeeks.org/subset-sum-problem-dp-25/ [Given a set of non-negative integers, and a value sum, determine if there is a subset of the given set with sum equal to given sum.]
+https://www.geeksforgeeks.org/partition-problem-dp-18/ [no code] [whether a given set can be partitioned into two subsets such that the sum of elements in both subsets is the same. ]
+https://www.geeksforgeeks.org/count-of-subsets-with-sum-equal-to-x/ [Count of subsets with sum equal to X]
+Count the number of subset with a given difference [https://www.youtube.com/watch?v=ot_XBHyqpFc&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=11]
+https://leetcode.com/problems/target-sum/
+
+Pattern 2 -
+https://www.geeksforgeeks.org/unbounded-knapsack-repetition-items-allowed/
+https://www.geeksforgeeks.org/cutting-a-rod-dp-13/ [no code]
+https://www.geeksforgeeks.org/coin-change-dp-7/
+https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/
+Maximum Ribbon Cut https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/YQVZJx1k0WY
+[We are given a ribbon of length ‘n’ and a set of possible ribbon lengths. We need to cut the ribbon into the maximum number of pieces.]
+
+Pattern 3 -
+Fibonacci Numbers   [https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/gx6jmzrMwgZ]
+Staircase           [https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/YQy7Lx79R0K]
+Number factors      https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/NE52PnMY376
+Minimum jumps to reach the end  https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/7nAKN0Qz67r
+
+Miscellaneous ->
 House Robber  [https://leetcode.com/problems/house-robber/]
+
+
+other questions -
+
 https://www.codechef.com/UADPIP01/problems/BLJUMP
 https://www.geeksforgeeks.org/min-number-of-operations-to-reduce-n-to-0-by-subtracting-any-digits-from-n/
 https://www.geeksforgeeks.org/coin-change-dp-7/
 
 
 
-how to identify DP problems ->
-do we have choices ->  we can pick items or not pick the item
-optimization -> max, min, largest, smallest
 
-DP array size is always the size of changing variable + 1
+========================================
+recursion base condition -> smallest valid input  [this might not be always true]
+
+when you need DP ?
+1. choice + overlapping solution (more than one recursive function call)
+2. Find optimal answer -> min, max, largest etc ....
+
+recusive sol -> memoizing -> if required, Top down matrix
+
+memoizing -> dimensions of matrix will be variables that are changing values
+
+========================================
+in top down DP we eliminate recursion call and use iterative function to fill the table to get the answer.
+dimensions of matrix will be variables that are changing values [find out from recursive code]
+
+matrix will be of [n+1][w+1] size where arr[n][w] will represent solution for first n elements and first w elements.
+
+base condition of recursive solution is use to initialized values in the top down DP array
 
 
 

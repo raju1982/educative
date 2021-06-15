@@ -40,6 +40,27 @@ public class CountPathsBetweenTwoNodes {
         return countPathsRecursive(graph, start, destination, count);
     }
 
+
+
+
+    //easier implementation
+    private static int pathCount = 0;
+    private static void countPathsDiffImpl(List<ArrayList<Integer>> graph, int start, int end){
+        boolean[] visited = new boolean[graph.size()];
+        dfsRec(graph, start, end, visited);
+    }
+
+    private static void dfsRec(List<ArrayList<Integer>> graph, int start, int end, boolean[] visited){
+        if(start == end){
+            pathCount++;
+            return;
+        }
+        visited[start] = true;
+        for(int i: graph.get(start)){
+            dfsRec(graph, i, end, visited);
+        }
+    }
+
     public static void main(String[] args){
         int size = 7;
         List<ArrayList<Integer>> graph = new ArrayList<>(size);
@@ -58,6 +79,9 @@ public class CountPathsBetweenTwoNodes {
         //dfs(graph);
 
         System.out.println(countPaths(graph, 0, 6));
+
+        countPathsDiffImpl(graph, 0, 6);
+        System.out.println(pathCount);
     }
 }
 

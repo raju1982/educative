@@ -1,3 +1,56 @@
+Tree are directed acyclic graph*** [direction -> parent to child].
+Tree are special type of graph with no cycle.
+
+AdjacencyListPresentation -
+List<ArrayList<Integer>> adj = new ArrayList<>(V);
+Map<Integer, ArrayList<Integer>>  adj = new HashMap<>(V);
+Map<String, HashMap<String, Integer>>  adj = new HashMap<>(V);
+
+Application of BFS -
+1. Shortest path in an undirected graph [IMP] [unweighted graph]
+
+Application of Depth First Search -
+1. All possible path [IMP]
+
+
+Questions -
+2. DepthFirstSearchAndBreathFirstSearch
+3. https://www.geeksforgeeks.org/java-program-to-check-whether-undirected-graph-is-connected-using-dfs/
+4. https://www.geeksforgeeks.org/check-if-a-directed-graph-is-connected-or-not/
+5. finding connected components in undirected graph -
+    https://www.geeksforgeeks.org/connected-components-in-an-undirected-graph/
+    https://www.geeksforgeeks.org/program-to-count-number-of-connected-components-in-an-undirected-graph/
+
+6. https://www.geeksforgeeks.org/iterative-depth-first-traversal/
+7. https://www.geeksforgeeks.org/count-possible-paths-two-vertices/ *** [do this] [CountPathsBetweenTwoNodes]
+
+BFSForDisconnectedGraphs -
+7. Check if a Path Exists Between Two Vertices in a directed graph(PathExistsBetweenTwoVertices)
+8. Calculate the Number of Nodes in a Given Graph Level [NumberOfNodesInAGivenGraphLevel] ****
+
+DetectCycleInUndirectedGraph
+DetectCycleInDirectedGraph *** [do this]
+An undirected graph is tree if it has following properties.  [There is no cycle. & The graph is connected.]
+https://www.geeksforgeeks.org/check-given-graph-tree/
+
+DijkstraShortestPathAlgorithm **** [do this]
+
+Learn Topological short and other shortest path stuff ***********
+
+Matrix -
+NumberOfIslands [finding connected components in undirected graph] [https://www.geeksforgeeks.org/find-number-of-islands/]
+ShortestPathInBinaryMaze [shortest distance between two points]
+
+
+https://leetcode.com/problems/surrounded-regions/solution/  https://www.geeksforgeeks.org/given-matrix-o-x-replace-o-x-surrounded-x/  https://unacademy.com/class/matrix-problems-on-graphs-ii/CRW8D61S [1.00.00]
+
+Nearest1InBinaryMatrix [https://www.geeksforgeeks.org/nearest-1-0-binary-matrix/]
+https://www.geeksforgeeks.org/minimum-time-required-so-that-all-oranges-become-rotten/  https://leetcode.com/problems/rotting-oranges/solution/ https://unacademy.com/class/matrix-problems-on-graphs-ii/CRW8D61S [1:43:00]
+
+
+
+=========================
+
 A Graph is a data structure that consists of the following two components:
 A finite set of vertices also called nodes.
 A finite set of ordered pair of the form (u, v) called as edge.
@@ -20,7 +73,7 @@ edges -> Connections.
 
 
 Application of BFS -
-1. Shortest path in an undirected graph
+1. Shortest path in an undirected graph [IMP]
 2. Webcrawler in search engine
 3. Peer to Peer network (bittorrent) [search among your neighbors and then their neighbors]
 4. Social networking search (searching for a person, first name of person who is your friend and then who is your friends friends)
@@ -32,12 +85,12 @@ Application of BFS -
 
 Application of Depth First Search -
 O(V+E)
-
 1. Cycle detection (directed graph)
 2. Topological sorting
 3. Strongly connected components
 4. Solving maze and similar puzzle
 5. Path finding
+6. All possible path [IMP]
 
 
 

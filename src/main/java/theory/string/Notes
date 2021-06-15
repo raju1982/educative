@@ -1,15 +1,40 @@
-Leftmost Repeating Character
-Leftmost non-repeating character
-Check if Strings are Rotations [write code *** geeks for geeks]
 Anagram Search [write code *** geeks for geeks]
-groupAnagrams [AlgoExpert]
 
 
 
 
-Reverse words in a string [write code *** geeks for geeks]
-Word Break - (can you break -true or false) [https://leetcode.com/problems/word-break/]
+Questions -
+ModifiedPalindrome :- "A man, a plan, a canal: Panama" is a palindrome.
+//Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+
+https://www.geeksforgeeks.org/reduce-the-string-by-removing-k-consecutive-identical-characters/
+
 Remove Duplicates
 
+Reverse words in a string
+
+Leftmost Repeating Character
+
+GenerateSubsets  ==  SubSetOFArray == backtracking
+
+StringPermutation == backtracking [revise]
+
+Check if Strings are Rotations [write code *** geeks for geeks]
+
+Word Break - (can you break -true or false) [https://leetcode.com/problems/word-break/]
+Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.
+
+https://leetcode.com/problems/decode-string/
+[https://www.youtube.com/watch?v=CW3ZYAN5Huo]
+
+https://leetcode.com/problems/longest-substring-without-repeating-characters/
+[https://www.youtube.com/watch?v=KVDAVnTCjE0&list=PLIIhpZMtp9m5uFg_JoWmrcXBEqMaG_zfY&index=2]
+
+groupAnagrams [AlgoExpert]
+
+https://leetcode.com/problems/longest-palindromic-substring/
+
+solution -
+https://www.youtube.com/watch?v=KVDAVnTCjE0&list=PLIIhpZMtp9m5uFg_JoWmrcXBEqMaG_zfY
 
 

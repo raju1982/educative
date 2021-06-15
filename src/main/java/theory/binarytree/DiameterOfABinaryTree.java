@@ -2,30 +2,74 @@ package theory.binarytree;
 
 public class DiameterOfABinaryTree {
 
-    public static void main(String[] args){
-        Node root=new Node(10);
-        root.setLeftNode(new Node(20));
-        root.setRightNode(new Node(30));
-        root.getRightNode().setLeftNode(new Node(40));
-        root.getRightNode().setRightNode(new Node(60));
-        root.getRightNode().getLeftNode().setLeftNode(new Node(50));
-        root.getRightNode().getRightNode().setRightNode(new Node(70));
+    static class Node{
+        int val;
+        Node rightNode;
+        Node leftNode;
 
-        System.out.println("height: " + solution(root));
-        System.out.println("diameter: " + diameter);
+        Node(int val){
+            this.val = val;
+        }
     }
 
-    private static int diameter=0 ;
-    //time complexity O(n)
-    //Auxiliary Space = height + 1 = O(h)
-    public static int solution(Node root){
-        if(root ==  null){
+    static class Pair{
+        int diameter;
+        int height;
+
+        Pair(int diameter, int height){
+            this.diameter = diameter;
+            this.height = height;
+        }
+    }
+
+    //fast solution
+    public static Pair findDiameter_fast(Node root){
+        if(root == null){
+            return new Pair(0, -1);
+        }
+
+        Pair leftChildPair = findDiameter_fast(root.leftNode);
+        Pair rightChildPair = findDiameter_fast(root.rightNode);
+
+        int diameter = Math.max(Math.max(leftChildPair.diameter, rightChildPair.diameter), 2 + leftChildPair.height + rightChildPair.height);
+        int height = 1 + Math.max( leftChildPair.height, rightChildPair.height);
+
+        return new Pair(diameter, height);
+    }
+
+
+
+    //Slow Solution
+    public static int findDiameter_slow(Node root){
+        if(root == null){
             return 0;
         }
-        int leftHeight = solution(root.getLeftNode());
-        int rightHeight = solution(root.getRightNode());
-        diameter = Math.max(diameter, leftHeight + rightHeight + 1);
-        return Math.max(leftHeight, rightHeight) + 1;
+
+        int leftChildDiameter = findDiameter_slow(root.leftNode);
+        int rightChildDiameter = findDiameter_slow(root.rightNode);
+
+        return Math.max(Math.max(leftChildDiameter, rightChildDiameter), 2 + height(root.leftNode) + height(root.rightNode));
+    }
+
+    public static int height(Node root){
+        if(root == null){
+            return -1;
+        }
+        return 1 + Math.max(height(root.leftNode), height(root.rightNode));
+    }
+
+    public static void main(String[] args){
+        Node root=new Node(10);
+        root.leftNode = new Node(20);
+        root.rightNode = new Node(30);
+        root.rightNode.leftNode = new Node(40);
+        root.rightNode.rightNode = new Node(60);
+        root.rightNode.leftNode.leftNode = new Node(50);
+        root.rightNode.rightNode.rightNode = new Node(70);
+
+        System.out.println("height: " + findDiameter_slow(root));
+
+        System.out.println("height: " + findDiameter_fast(root).diameter);
     }
 
 }

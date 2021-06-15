@@ -1,4 +1,4 @@
-package theory.matrix;
+package theory.graph.matrix;
 
 
 import java.util.LinkedList;
@@ -6,6 +6,91 @@ import java.util.Queue;
 
 // Java program to find the shortest path between a given source cell to a destination cell.
 public class ShortestPathInBinaryMaze {
+
+
+    /*
+        static class Point{
+        int x;
+        int y;
+        int dist;
+        Point(int x, int y){
+            this.x = x;
+            this.y = y;
+        }
+
+        Point(int x, int y, int dist){
+            this.x = x;
+            this.y = y;
+            this.dist = dist;
+        }
+    }
+
+    public static List<Point> getNeighbours(int[][] input, Point point){
+        int row = input.length;
+        int column = input[0].length;
+        List<Point> result = new ArrayList<>();
+        if(point.x-1>=0 && input[point.x-1][point.y] == 1){
+            result.add(new Point(point.x-1, point.y));
+        }
+
+        if(point.x+1<row && input[point.x+1][point.y] == 1){
+            result.add(new Point(point.x+1, point.y));
+        }
+
+        if(point.y-1>=0 && input[point.x][point.y-1] == 1){
+            result.add(new Point(point.x, point.y-1));
+        }
+
+        if(point.y+1<column && input[point.x][point.y+1] == 1){
+            result.add(new Point(point.x, point.y+1));
+        }
+        return result;
+    }
+
+    public static int findDist(int[][] input, Point PointA, Point PointB){
+        boolean[][] visited = new boolean[input.length][input[0].length];
+        visited[PointA.x][PointA.y] = true;
+        int result = -1;
+        Queue<Point> queue = new LinkedList<>();
+        queue.add(PointA);
+
+        while(!queue.isEmpty()){
+            Point point = queue.poll();
+
+            for(Point tmp : getNeighbours(input, point)){
+                //check for destination node
+                if(tmp.x == PointB.x && tmp.y == PointB.y){
+                    return point.dist+1;
+                }
+
+                if(!visited[tmp.x][tmp.y]){
+                    queue.add(new Point(tmp.x, tmp.y, point.dist+1));
+                    visited[tmp.x][tmp.y] = true;
+                }
+
+            }
+
+        }
+        return result;
+    }
+
+     */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     static int ROW = 9;
     static int COL = 10;
@@ -109,7 +194,8 @@ public class ShortestPathInBinaryMaze {
 
     // Driver Code
     public static void main(String[] args) {
-        int mat[][] = {{1, 0, 1, 1, 1, 1, 0, 1, 1, 1},
+        int mat[][] = {
+                {1, 0, 1, 1, 1, 1, 0, 1, 1, 1},
                 {1, 0, 1, 0, 1, 1, 1, 0, 1, 1},
                 {1, 1, 1, 0, 1, 1, 0, 1, 0, 1},
                 {0, 0, 0, 0, 1, 0, 0, 0, 0, 1},
@@ -117,7 +203,8 @@ public class ShortestPathInBinaryMaze {
                 {1, 0, 1, 1, 1, 1, 0, 1, 0, 0},
                 {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
                 {1, 0, 1, 1, 1, 1, 0, 1, 1, 1},
-                {1, 1, 0, 0, 0, 0, 1, 0, 0, 1}};
+                {1, 1, 0, 0, 0, 0, 1, 0, 0, 1}
+        };
 
         Point source = new Point(0, 0);
         Point dest = new Point(3, 4);

@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class RemoveDuplicates {
+
+    //one solution
     public static String sol(String input){
         if(input == null || input.trim().length() == 0){
             throw new IllegalArgumentException();
@@ -26,6 +28,25 @@ public class RemoveDuplicates {
         }
 
         return sb.toString();
+    }
+
+
+    //other solution
+    public static String modifyString(String input){
+        char[] arr = input.toCharArray();
+        int writeIndex = 0;
+
+        Set<Character> set = new HashSet<>();
+        for(int readIndex=0; readIndex<input.length(); readIndex++){
+            char tmp = arr[readIndex];
+            if(!set.contains(tmp)){
+                arr[writeIndex] = tmp;
+                writeIndex++;
+                set.add(tmp);
+            }
+        }
+
+        return new String(arr, 0, writeIndex);
     }
 
     public static void main(String[] args){

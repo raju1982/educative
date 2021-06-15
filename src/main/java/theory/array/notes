@@ -120,7 +120,18 @@ Arrays.fill(data, -1);
 int index = input.charAt(i)-97;
 answer = str.substring(i, j+1);
 //reduce string length
-currentWord.setLength(currentWord.length() - 1);
+StringBuilder -> currentWord.setLength(currentWord.length() - 1);
+Character.isDigit(ch) || Character.isLetter(ch)
+//you can parse the string from start or from end
+input.replaceAll("\\s{2,}", " ")
+new String(charArray), new String(charArray, startIndex, length)
+IndexOf(char c, int startindex)
+public Str replace(char/String oldC, char/String newC)
+public Str replaceAll(String regex, String replacement)
+String to Integer using - Integer.parseInt() , Integer.valueOf()
+Arrays.sort(arr, Collections.reverseOrder());
+Collections.sort(ls, Collections.reverseOrder());
+public String[] split(String regex)
 
 conversion -
 // ArrayList to Array Conversion
@@ -181,11 +192,6 @@ throw new IllegalArgumentException("invalid data"); for invalid data
 
 //create custom exception & error ->
 
-method throws exception
-https://www.baeldung.com/java-new-custom-exception
-https://www.baeldung.com/java-exceptions-interview-questions
-https://howtodoinjava.com/testng/testng-expected-exception/
-https://dzone.com/articles/java-exception-handling-interview-questions-and-an-1
 
 
 

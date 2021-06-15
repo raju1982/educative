@@ -1,7 +1,19 @@
+in order traversal of binary search tree is always sorted.
+a binary tree is binary search tree if it's in order traversal is sorted.
+time complexity of binary search tree is O(height)
+
+//question order -
+insertNode * [all addition are at the leaf node]
+searchNode *
+deleteNode *
+
+
+
+
+===================================
 left node will be smaller and right node will be larger.
 TreeSet and TreeMap are implementation of Self balancing binary search tree (Red Black Tree).
 TreeSet and TreeMap store data in sorted order.
-
 
 always try to create a balanced binary tree, below operation in this type of tree is O(log n)
 - Search, insert, delete or finding the closest all of these are O(h), where h is the height of binary search tree.
@@ -9,9 +21,7 @@ always try to create a balanced binary tree, below operation in this type of tre
 
 Linked data structure like tree, binary search tree and linked list do not require resizing, however since all element are at different location they are not cache friendly.
 
-in order traversal of binary search tree is always sorted.
 
-a binary tree is binary search tree if it's in order traversal is sorted.
 
 AVL tree and Red Black Tree are Self Balancing Binary Search tree.
 

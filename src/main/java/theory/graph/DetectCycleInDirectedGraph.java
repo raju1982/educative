@@ -43,6 +43,34 @@ public class DetectCycleInDirectedGraph {
         return false;
     }
 
+
+    public static boolean detectCycle(List<ArrayList<Integer>> graph){
+        boolean[] visited = new boolean[graph.size()];
+        return detectCycle(graph, visited, 0, new ArrayList<>());
+    }
+
+    public static boolean detectCycle(List<ArrayList<Integer>> graph, boolean[] visited, int node, List<Integer> parentStack){
+        visited[node] = true;
+
+        for(int i: graph.get(node)){
+            if(!visited[i]){
+                parentStack.add(node);
+                boolean val = detectCycle(graph, visited, i, parentStack);
+                parentStack.remove(parentStack.size()-1);
+                if(val){
+                    return true;
+                }
+            }
+            else{
+                if(parentStack.contains(i)){
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
     public static void main(String[] args){
         int noOfNodes = 4;
         List<ArrayList<Integer>> graph =  new ArrayList<>(noOfNodes);
@@ -57,5 +85,6 @@ public class DetectCycleInDirectedGraph {
         addEdge(graph, 3, 1);
 
         System.out.println(dfs(graph, noOfNodes));
+        System.out.println(detectCycle(graph));
     }
 }

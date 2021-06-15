@@ -22,6 +22,20 @@ public class SubSetOFArray {
             System.out.println(tmp);
         }
     }
+
+    static List<String> subst = new ArrayList<>();
+    public static void subsets(String input, int depth, StringBuilder runningString){
+
+        if(input.length() == depth){
+            subst.add(runningString.toString());
+            return;
+        }
+
+        runningString.append(input.charAt(depth));
+        subsets(input, depth+1, runningString);
+        runningString.setLength(runningString.length()-1);
+        subsets(input, depth+1, runningString);
+    }
 }
 
 

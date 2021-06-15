@@ -23,6 +23,19 @@ Breadth First / Level Order Traversal -> left to right at each level (start from
 
 
 ==============
+//current questions -
+Depth First traversal & Breadth First / Level Order Traversal
+LevelOrderTraversalLineByLine [Line by Line]
+Construct Tree from given Inorder and Preorder traversals [https://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-traversal/]
+DiameterOfABinaryTree
+CheckForBalancedBinaryTree
+Right view of Binary Tree using Queue
+Connect nodes at same level [https://leetcode.com/problems/populating-next-right-pointers-in-each-node/solution/] [https://www.youtube.com/watch?v=bmjAiDsIDas]
+Print path from root to a given node in a binary tree
+LowestCommonAncestor               https://www.youtube.com/watch?v=13m9ZCB8gjw
+https://www.geeksforgeeks.org/find-distance-between-two-nodes-of-a-binary-tree/ [distance between any two nodes]
+
+
 
 //question order -
 ==============================   geeks for geeks dsa course  (https://practice.geeksforgeeks.org/batch/dsa-4/)
@@ -65,6 +78,12 @@ hard, not fully understood ->
 KthAncestorOfGivenNode
 FindTheLargestCompleteSubtreeInAGivenBinaryTree
 
+
+
+homework -
+https://www.geeksforgeeks.org/print-nodes-top-view-binary-tree/
+https://www.geeksforgeeks.org/print-binary-tree-vertical-order/
+https://www.geeksforgeeks.org/boundary-traversal-of-binary-tree/
 
 
 

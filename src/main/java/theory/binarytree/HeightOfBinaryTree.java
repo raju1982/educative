@@ -20,14 +20,14 @@ public class HeightOfBinaryTree {
     //Auxiliary Space = height + 1 = O(h)
     public static int findHeight(Node root){
         if(root == null){
-            return 0;
+            return -1;
         }
         return Math.max(findHeight(root.getLeftNode()), findHeight(root.getRightNode())) + 1;
     }
 
     public static int findHeight2(Node node){
         if(node == null){
-            return 0;
+            return -1;
         }
         Queue<Node> queue = new LinkedList<>();
         queue.add(node);
