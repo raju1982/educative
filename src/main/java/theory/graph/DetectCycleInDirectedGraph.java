@@ -6,11 +6,11 @@ import java .util.ArrayList;
 //O(V+E), which we already know is the complexity of traversing the adjacency list that represents our graph.
 public class DetectCycleInDirectedGraph {
 
-    public static void addEdge(List<ArrayList<Integer>> graph, int startIndex, int endIndex){
+    public static void addEdge(List<List<Integer>> graph, int startIndex, int endIndex){
         graph.get(startIndex).add(endIndex);
     }
 
-    public static boolean dfs(List<ArrayList<Integer>> graph, int noOfNodes){
+    public static boolean dfs(List<List<Integer>> graph, int noOfNodes){
         boolean[] visited = new boolean[noOfNodes];
         boolean[] recursionStack = new boolean[noOfNodes];
 
@@ -25,7 +25,7 @@ public class DetectCycleInDirectedGraph {
         return false;
     }
 
-    public static boolean dfs(List<ArrayList<Integer>> graph, int startIndex, boolean[] visited, boolean[] recursionStack){
+    public static boolean dfs(List<List<Integer>> graph, int startIndex, boolean[] visited, boolean[] recursionStack){
         visited[startIndex] = true;
         recursionStack[startIndex] = true;
 
@@ -44,12 +44,12 @@ public class DetectCycleInDirectedGraph {
     }
 
 
-    public static boolean detectCycle(List<ArrayList<Integer>> graph){
+    public static boolean detectCycle(List<List<Integer>> graph){
         boolean[] visited = new boolean[graph.size()];
         return detectCycle(graph, visited, 0, new ArrayList<>());
     }
 
-    public static boolean detectCycle(List<ArrayList<Integer>> graph, boolean[] visited, int node, List<Integer> parentStack){
+    public static boolean detectCycle(List<List<Integer>> graph, boolean[] visited, int node, List<Integer> parentStack){
         visited[node] = true;
 
         for(int i: graph.get(node)){
@@ -71,9 +71,33 @@ public class DetectCycleInDirectedGraph {
         return false;
     }
 
+    public static boolean isCyclic(List<List<Integer>> graph){
+        return isCyclic(graph, new boolean[graph.size()], 0, new ArrayList<> ());
+    }
+
+
+    public static boolean isCyclic(List<List<Integer>> graph, boolean[] visited, int index, List<Integer> stack){
+        visited[index] = true;
+        for(int i : graph.get(index)){
+            if(!visited[i]){
+                stack.add(index);
+                if(isCyclic(graph, visited, i, stack)){
+                    return true;
+                }
+                stack.remove(stack.size()-1);
+            }
+            else if(stack.contains(i)){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
     public static void main(String[] args){
         int noOfNodes = 4;
-        List<ArrayList<Integer>> graph =  new ArrayList<>(noOfNodes);
+        List<List<Integer>> graph =  new ArrayList<>(noOfNodes);
         for(int i=0; i<noOfNodes; i++){
             graph.add(new ArrayList<>());
         }
@@ -86,5 +110,6 @@ public class DetectCycleInDirectedGraph {
 
         System.out.println(dfs(graph, noOfNodes));
         System.out.println(detectCycle(graph));
+        System.out.println(isCyclic(graph));
     }
 }

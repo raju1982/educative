@@ -30,7 +30,7 @@ BFSForDisconnectedGraphs -
 
 DetectCycleInUndirectedGraph
 DetectCycleInDirectedGraph *** [do this]
-An undirected graph is tree if it has following properties.  [There is no cycle. & The graph is connected.]
+An undirected graph is tree if it has following properties.  [There is no cycle/n-1 edges. & The graph is connected.]
 https://www.geeksforgeeks.org/check-given-graph-tree/
 
 DijkstraShortestPathAlgorithm **** [do this]
@@ -40,13 +40,17 @@ Learn Topological short and other shortest path stuff ***********
 Matrix -
 NumberOfIslands [finding connected components in undirected graph] [https://www.geeksforgeeks.org/find-number-of-islands/]
 ShortestPathInBinaryMaze [shortest distance between two points]
-
-
-https://leetcode.com/problems/surrounded-regions/solution/  https://www.geeksforgeeks.org/given-matrix-o-x-replace-o-x-surrounded-x/  https://unacademy.com/class/matrix-problems-on-graphs-ii/CRW8D61S [1.00.00]
-
+https://leetcode.com/problems/surrounded-regions/  https://www.geeksforgeeks.org/given-matrix-o-x-replace-o-x-surrounded-x/  https://unacademy.com/class/matrix-problems-on-graphs-ii/CRW8D61S [1.00.00]
 Nearest1InBinaryMatrix [https://www.geeksforgeeks.org/nearest-1-0-binary-matrix/]
 https://www.geeksforgeeks.org/minimum-time-required-so-that-all-oranges-become-rotten/  https://leetcode.com/problems/rotting-oranges/solution/ https://unacademy.com/class/matrix-problems-on-graphs-ii/CRW8D61S [1:43:00]
+https://leetcode.com/problems/keys-and-rooms/solution/
+https://leetcode.com/problems/shortest-bridge/
+https://leetcode.com/problems/map-of-highest-peak/submissions/
+https://www.geeksforgeeks.org/check-possible-path-2d-matrix/
 
+More questions -
+CloneUndirectedGraph https://www.geeksforgeeks.org/clone-an-undirected-graph/  https://leetcode.com/problems/clone-graph/
+https://www.geeksforgeeks.org/check-given-graph-tree/
 
 
 =========================

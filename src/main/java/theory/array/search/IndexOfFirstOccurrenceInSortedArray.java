@@ -5,7 +5,7 @@ public class IndexOfFirstOccurrenceInSortedArray {
     public static int solution(int[] input, int number){
         int low = 0;
         int high = input.length -1;
-
+        int result = -1;
         while(low<=high){
             int mid = (low + high)/2;
 
@@ -16,15 +16,11 @@ public class IndexOfFirstOccurrenceInSortedArray {
                 low = mid+1;
             }
             else{
-               if(mid == 0 || (input[mid-1]!=input[mid])){
-                    return mid;
-               }
-               else{
-                   high = mid-1;
-               }
+                result = mid;
+                high = mid-1;
             }
         }
-        return -1;
+        return result;
     }
 
     public static void main(String[] args){

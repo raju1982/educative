@@ -1,4 +1,4 @@
-package theory.array;
+package theory.array.search;
 
 public class AllocateMinimumPages {
 

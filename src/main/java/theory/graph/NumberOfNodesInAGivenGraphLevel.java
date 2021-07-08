@@ -42,6 +42,35 @@ public class NumberOfNodesInAGivenGraphLevel {
         return count;
     }
 
+
+    public static int differentApproach(List<ArrayList<Integer>> adj, int level){
+
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(0);
+
+        boolean[] visited = new boolean[adj.size()];
+        visited[0] = true;
+        int currLevel = 1;
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            if(currLevel == level){
+                return size;
+            }
+            for(int j=0; j<size; j++){
+                int tmp = queue.poll();
+                for(int i: adj.get(tmp)){
+                    if(!visited[i]){
+                        queue.add(i);
+                        visited[i] = true;
+                    }
+                }
+            }
+            currLevel++;
+        }
+
+        return -1;
+    }
+
     public static void main(String[] args){
         int vertices = 6;
         List<ArrayList<Integer>> graph = new ArrayList<>(vertices);
@@ -59,5 +88,7 @@ public class NumberOfNodesInAGivenGraphLevel {
         //System.out.println(bfs(graph, 0, 1));
         System.out.println(bfs(graph, 0, 2));
         System.out.println(bfs(graph, 0, 3));
+        System.out.println();
+        System.out.println(differentApproach(graph, 2));
     }
 }

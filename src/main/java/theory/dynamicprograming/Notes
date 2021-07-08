@@ -7,7 +7,7 @@ Double pass generally
 
 https://www.youtube.com/watch?v=-GtpxG6l_Mc&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=10
 
-Questiosn -
+Questions -
 Pattern 1-
 https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/ [find out the maximum value subset of val[] such that sum of the weights of this subset is smaller than or equal to W]
 https://www.geeksforgeeks.org/subset-sum-problem-dp-25/ [Given a set of non-negative integers, and a value sum, determine if there is a subset of the given set with sum equal to given sum.]
@@ -33,9 +33,21 @@ Minimum jumps to reach the end  https://www.educative.io/courses/grokking-dynami
 Miscellaneous ->
 House Robber  [https://leetcode.com/problems/house-robber/]
 
+Pattern 4 -
+LongestCommonSubsequence  [https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/] [https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/B8Pq4ZnBN0N]
+LongestCommonSubstring    [https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/RMkk7NwE44R]
+ShortestCommonSupersequence  [https://www.geeksforgeeks.org/shortest-common-supersequence/]
+Minimum number of deletions and insertions to transform one string into another [code later***] [https://www.geeksforgeeks.org/minimum-number-deletions-insertions-transform-one-string-another/]
+Longest Palindromic Subsequence [code later***] [https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/] [https://www.youtube.com/watch?v=wuOOOATz_IA&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=26]
+Minimum number of deletion in a string to make it a palindrome [code later***] https://www.geeksforgeeks.org/minimum-number-deletions-make-string-palindrome/   https://www.youtube.com/watch?v=CFwCCNbRuLY&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=29
+LongestRepeatedSubsequence      https://www.geeksforgeeks.org/longest-repeated-subsequence/     https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/7npz2VooPl1
+Sequence Pattern Matching  [code later**] https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/JY7yZ2VyJnP    https://www.youtube.com/watch?v=QVntmksK2es&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=32
+Minimum number of insertion in a string to make it a palindrome     https://www.geeksforgeeks.org/minimum-insertions-to-form-a-palindrome-dp-28/
+
+
+
 
 other questions -
-
 https://www.codechef.com/UADPIP01/problems/BLJUMP
 https://www.geeksforgeeks.org/min-number-of-operations-to-reduce-n-to-0-by-subtracting-any-digits-from-n/
 https://www.geeksforgeeks.org/coin-change-dp-7/

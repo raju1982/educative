@@ -55,6 +55,7 @@ public class SubsetsSum {
         }
     }
 
+    //1 == true
     static int[][] memo;
     public static int memo_sol(int[] set, int sum, int index){
         if(sum == 0){

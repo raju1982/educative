@@ -90,7 +90,7 @@ public class DetectCycleInUndirectedGraph {
         // Adding edges one by one
         addEdge(graph,0,1);
         addEdge(graph,0,2);
-        //addEdge(graph,2,3);
+        addEdge(graph,2,3);
         addEdge(graph,1,3);
         addEdge(graph,4,5);
         addEdge(graph,5,6);

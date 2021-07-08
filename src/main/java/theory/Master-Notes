@@ -1,0 +1,179 @@
+Must do Theory questions -
+BinarySearch
+BinarySearchIterative
+QuickSelect_SimplerVersion
+KSmallestElementUsingPriorityQueue
+preOrderTraversal/inOrderTraversal/postOrderTraversal (Depth First traversal) [binary tree]
+Level Order Traversal (Breadth First) [binary tree]
+DepthFirstSearchAndBreathFirstSearch
+
+
+
+AdjacencyListPresentation -
+List<ArrayList<Integer>> adj = new ArrayList<>(V);
+Map<Integer, List<Integer>>  adj = new HashMap<>(V);
+Map<String, HashMap<String, Integer>>  adj = new HashMap<>(V);
+
+Application of BFS -
+1. Shortest path in an undirected graph [IMP] [unweighted graph]
+
+Application of Depth First Search -
+1. All possible path [IMP]
+
+
+Tips -
+BinarySearch -
+If array is sorted you can apply binary search -> first occurrence, last occurrence, count, rotationCount etc ...
+Sometime the real array might be hidden, if the real array is sorted you can apply binary search
+Sometimes we can apply binary search on unsorted array also, if we figure out the condition to reject half of the array & condition to return answer.
+
+Array -
+read and write pointer
+can we parse the array from end
+while parsing array in one direction what all we need to keep track off (minvalue, maxValue etc ...)
+multiple times parsing the array in one direction, each time storing some important information in array of same length [int[] leftMax = new int[input.length]; int[] rightMax = new int[input.length];]
+sliding window
+prefix sum stored in hashset, then search for [prefix_sum= total_sum-sum] in the hashset
+hashset + sliding window
+hashmap + sliding window
+can we sort array and have two pointers one at start and one at end
+can you use two pointers one from start and one from end and do some math like finding sum
+
+Sort -
+Quick sort - // **** kth largest element is equivalent to find (n - k)th smallest element in array.
+Re-arrange number means quicksort with correct pivot. *****
+
+
+
+//don't forget the basic case or EDGE case
+
+
+
+Good Questions -
+-------
+Pattern-
+https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/submissions/
+https://leetcode.com/problems/cutting-ribbons/
+https://www.geeksforgeeks.org/allocate-minimum-number-pages/
+-------
+https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/
+moveZeroToRight
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solution/
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/solution/
+https://leetcode.com/problems/trapping-rain-water/submissions/
+https://leetcode.com/problems/merge-sorted-array/
+https://leetcode.com/problems/top-k-frequent-words/[*****************]
+--------
+Pattern -
+https://leetcode.com/problems/meeting-rooms-ii/submissions/
+LaptopRentals                       [https://www.algoexpert.io/questions/Laptop%20Rentals]
+--------
+https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/ [*****************]    https://costia.medium.com/leetcode-1353-maximum-number-of-events-that-can-be-attended-medium-7afca19b1292
+https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/discuss/1249514/Java-%3A-Sort-(start-time)-andand-Queue-Events-by-earliest-end-time
+ConstructTreeFromGivenInorderAndPreorderTraversals [*****************]
+DiameterOfABinaryTree [*******]
+CheckForBalancedBinaryTree [********]
+ConnectNodesAtSameLevel [********]
+LowestCommonAncestor [*******]
+GetLevelOfANodeInABinaryTree [*******]
+https://www.geeksforgeeks.org/check-if-a-directed-graph-is-connected-or-not/
+NumberOfNodesInAGivenGraphLevel [*******]
+DetectCycleInDirectedGraph [*******]
+StringPermutation[*************]
+RatInAMaze2 [https://practice.geeksforgeeks.org/tracks/DSASP-Backtracking/?batchId=154]
+WordSearch [https://leetcode.com/problems/word-search/]
+
+--------
+Pattern -
+https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/ [find out the maximum value subset of val[] such that sum of the weights of this subset is smaller than or equal to W]
+https://www.geeksforgeeks.org/subset-sum-problem-dp-25/ [Given a set of non-negative integers, and a value sum, determine if there is a subset of the given set with sum equal to given sum.]
+https://www.geeksforgeeks.org/count-of-subsets-with-sum-equal-to-x/ [Count of subsets with sum equal to X]
+--------
+Pattern -
+https://www.geeksforgeeks.org/unbounded-knapsack-repetition-items-allowed/
+https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/  [*************]
+Maximum Ribbon Cut https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/YQVZJx1k0WY [*************]
+[We are given a ribbon of length ‘n’ and a set of possible ribbon lengths. We need to cut the ribbon into the maximum number of pieces.]
+--------
+Minimum jumps to reach the end  https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/7nAKN0Qz67r
+House Robber  [https://leetcode.com/problems/house-robber/]
+
+SlidingWindowMedian
+
+https://www.hackerrank.com/challenges/triple-sum/problem
+https://www.hackerrank.com/challenges/minimum-time-required/
+https://www.hackerrank.com/challenges/max-array-sum
+LongestCommonSubsequence  [https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/] [https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/B8Pq4ZnBN0N]
+LongestCommonSubstring    [https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/RMkk7NwE44R]
+
+
+
+String Tricks -
+charAt(i) , toCharArray(), String.length(), String.valueOf(charArray)
+input = input.toLowerCase();
+int[] data = new int[26]; or CHAR=256, no need to subtract 97
+Arrays.fill(data, -1);
+int index = input.charAt(i)-97;
+answer = str.substring(i, j+1);
+//reduce string length
+StringBuilder -> currentWord.setLength(currentWord.length() - 1);
+Character.isDigit(ch) || Character.isLetter(ch)
+//you can parse the string from start or from end
+input.replaceAll("\\s{2,}", " ")
+new String(charArray), new String(charArray, startIndex, length)
+IndexOf(char c, int startindex)
+public Str replace(char/String oldC, char/String newC)
+public Str replaceAll(String regex, String replacement)
+String to Integer using - Integer.parseInt() , Integer.valueOf()
+public String[] split(String regex)
+
+Conversion -
+// ArrayList to Array Conversion
+int[] arr = al.stream().mapToInt(i -> i).toArray();
+//convert List to Array
+Integer[] arr = new Integer[al.size()];
+arr = al.toArray(arr);
+//convert Integer Array to List
+Arrays.stream(arr).collect(Collectors.toList());
+PriorityQueue<Integer> queue = new PriorityQueue<>(10, Collections.reverseOrder());
+List<Integer> intList = Arrays.asList(1, 2, 3);
+
+Arrays.sort(arr, Collections.reverseOrder());
+Collections.sort(ls, Collections.reverseOrder());
+
+
+
+******      Leetcode ->         ********
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pending -
+Chocolate Distribution Problem [write code********]
+overlapping the merged intervals.  [write code********] [geeksforgeeks]
+Meeting the maximum guests [write code********]
+SingleCycleCheck                    [https://www.algoexpert.io/questions/Single%20Cycle%20Check]
+
+threeNumberSum  [AlgoExpert]
+smallestDifference  [AlgoExpert]
+isMonotonic [AlgoExpert]
+
+longestPeak [AlgoExpert]
+spiral traverse [AlgoExpert]
+nonConstructibleChange [AlgoExpert]
+sortedSquaredArray
+K Closest Elements       **** [do this again and again]
+Merge K Sorted Arrays    **** [do this again and again]

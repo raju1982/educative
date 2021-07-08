@@ -1,7 +1,6 @@
 package theory.graph;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class CountPathsBetweenTwoNodes {
 
@@ -61,6 +60,33 @@ public class CountPathsBetweenTwoNodes {
         }
     }
 
+    public static int countPath(List<ArrayList<Integer>> adj, int start , int end){
+
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(start);
+        int count = 0;
+        boolean[] visited = new boolean[adj.size()];
+        visited[start] = true;
+
+        while(!queue.isEmpty()){
+            int tmp = queue.poll();
+
+            for(int i: adj.get(tmp)){
+                if(i==end){
+                    count++;
+                }
+                if(!visited[i]){
+                    queue.add(i);
+                }
+            }
+        }
+
+        return count;
+    }
+
+
+
+
     public static void main(String[] args){
         int size = 7;
         List<ArrayList<Integer>> graph = new ArrayList<>(size);
@@ -82,6 +108,8 @@ public class CountPathsBetweenTwoNodes {
 
         countPathsDiffImpl(graph, 0, 6);
         System.out.println(pathCount);
+
+        System.out.println(countPath(graph, 0, 6));
     }
 }
 

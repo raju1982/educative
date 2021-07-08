@@ -47,6 +47,5 @@ public class UnboundedKnapsack {
             Arrays.fill(memo[i], -1);
         }
         System.out.println(solWithMemoization(value2, weight2, currentWeight2, size2));
-
     }
 }

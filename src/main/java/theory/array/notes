@@ -1,3 +1,18 @@
+Search -
+    Binary Search
+    Binary Search Iterative
+    Index of first Occurrence in Sorted
+    Index of last Occurrence in Sorted
+    Given a sorted array and an element x, we need to count occurrences of x in the array.
+    Given a sorted binary array, we need to count 1s in this array.
+    Given an infinite sized array, we need to write an efficient solution to search an element.
+    Search In Rotated Array ***
+    Find pair in unsorted array which gives sum X
+    Find pair in sorted array which gives sum X
+    Find triplet in an sorted array which gives sum X
+    Find triplet in an unsorted array which gives sum X
+    Allocate Minimum Pages  https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
+
 Check if an Array is Sorted                                     [https://practice.geeksforgeeks.org/batch/dsa-4/]
 Reverse an Array                                                [https://practice.geeksforgeeks.org/batch/dsa-4/]
 
@@ -26,20 +41,7 @@ N-bonacci numbers [variation of fibonacci]
 Given a fixed array and multiple queries (), find out how to perf queries in a efficient manner
 Find Equilibrium Point in an array (sum of element on left side = sum of element on left side)
 
-Search -
-    Binary Search
-    Binary Search Iterative
-    Index of first Occurrence in Sorted
-    Index of last Occurrence in Sorted
-    Given a sorted array and an element x, we need to count occurrences of x in the array.
-    Given a sorted binary array, we need to count 1s in this array.
-    Given an infinite sized array, we need to write an efficient solution to search an element.
-    Search In Rotated Array ***
-    Find pair in unsorted array which gives sum X
-    Find pair in sorted array which gives sum X
-    Find triplet in an sorted array which gives sum X
-    Find triplet in an unsorted array which gives sum X
-    Allocate Minimum Pages  https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/  [write code********]
+
 
 Majority element is an element that appears more than n/2 times in an array of size n.
 Median of two sorted arrays
@@ -129,8 +131,6 @@ IndexOf(char c, int startindex)
 public Str replace(char/String oldC, char/String newC)
 public Str replaceAll(String regex, String replacement)
 String to Integer using - Integer.parseInt() , Integer.valueOf()
-Arrays.sort(arr, Collections.reverseOrder());
-Collections.sort(ls, Collections.reverseOrder());
 public String[] split(String regex)
 
 conversion -
@@ -144,6 +144,8 @@ Arrays.stream(arr).collect(Collectors.toList());
 PriorityQueue<Integer> queue = new PriorityQueue<>(10, Collections.reverseOrder());
 List<Integer> intList = Arrays.asList(1, 2, 3);
 
+Arrays.sort(arr, Collections.reverseOrder());
+Collections.sort(ls, Collections.reverseOrder());
 
 
 

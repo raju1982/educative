@@ -28,10 +28,6 @@ public class ConstructTreeFromGivenInorderAndPreorderTraversals {
             return null;
         }
 
-        if(preOrderLowIndex==-1){
-            System.out.println();
-        }
-
         Node root = new Node(preOrder[preOrderLowIndex]);
 
         int inOrderIndex = -1;
@@ -44,10 +40,6 @@ public class ConstructTreeFromGivenInorderAndPreorderTraversals {
 
         int leftElementSize = inOrderIndex-inOrderLowIndex;
 
-        if(leftElementSize<0){
-            System.out.println();
-        }
-
         root.leftNode = constructTree(inOrder, preOrder, inOrderLowIndex, inOrderIndex-1, preOrderLowIndex+1, preOrderLowIndex+leftElementSize);
         root.rightNode = constructTree(inOrder, preOrder, inOrderIndex+1, inOrderHighIndex, preOrderLowIndex+leftElementSize+1, preOrderHighIndex);
 
@@ -56,11 +48,13 @@ public class ConstructTreeFromGivenInorderAndPreorderTraversals {
 
 
     public static void main(String[] args){
-        char[] pre = new char[] { 'A', 'B', 'D', 'E', 'C', 'F' };
-        char[] in = new char[] { 'D', 'B', 'E', 'A', 'F', 'C' };
-        Node newTree = constructTree(in, pre, 0, in.length-1, 0, pre.length-1);
+        char[] preOrder = new char[] { 'A', 'B', 'D', 'E', 'C', 'F' };
+        char[] inOrder = new char[] { 'D', 'B', 'E', 'A', 'F', 'C' };
+        Node newTree = constructTree(inOrder, preOrder, 0, inOrder.length-1, 0, preOrder.length-1);
         inOrder(newTree);
         System.out.println();
     }
 
 }
+
+

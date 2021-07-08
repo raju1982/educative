@@ -23,6 +23,8 @@ public class SubSetOFArray {
         }
     }
 
+
+    //GenerateSubsets of String
     static List<String> subst = new ArrayList<>();
     public static void subsets(String input, int depth, StringBuilder runningString){
 

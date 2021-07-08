@@ -37,9 +37,31 @@ public class DiameterOfABinaryTree {
         return new Pair(diameter, height);
     }
 
+    public static void main(String[] args){
+        Node root=new Node(10);
+        root.leftNode = new Node(20);
+        root.rightNode = new Node(30);
+        root.rightNode.leftNode = new Node(40);
+        root.rightNode.rightNode = new Node(60);
+        root.rightNode.leftNode.leftNode = new Node(50);
+        root.rightNode.rightNode.rightNode = new Node(70);
+
+        System.out.println("height: " + findDiameter_fast(root).diameter);
+    }
+
+}
 
 
-    //Slow Solution
+
+
+
+
+
+/*
+
+System.out.println("height: " + findDiameter_slow(root));
+
+//Slow Solution
     public static int findDiameter_slow(Node root){
         if(root == null){
             return 0;
@@ -57,19 +79,4 @@ public class DiameterOfABinaryTree {
         }
         return 1 + Math.max(height(root.leftNode), height(root.rightNode));
     }
-
-    public static void main(String[] args){
-        Node root=new Node(10);
-        root.leftNode = new Node(20);
-        root.rightNode = new Node(30);
-        root.rightNode.leftNode = new Node(40);
-        root.rightNode.rightNode = new Node(60);
-        root.rightNode.leftNode.leftNode = new Node(50);
-        root.rightNode.rightNode.rightNode = new Node(70);
-
-        System.out.println("height: " + findDiameter_slow(root));
-
-        System.out.println("height: " + findDiameter_fast(root).diameter);
-    }
-
-}
+ */

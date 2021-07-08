@@ -4,16 +4,17 @@ public class StringPermutation {
 
     //hard to understand
     private static void permute(String str, int low) {
-        if (low == str.length()-1) {
+        if (low == str.length() - 1) {
             System.out.println(str);
+            return;
         }
-        else {
-            for (int i = low; i < str.length(); i++) {
-                str = swap(str, low, i);
-                permute(str, low + 1);
-                str = swap(str, low, i);
-            }
+
+        for (int i = low; i < str.length(); i++) {
+            str = swap(str, low, i);
+            permute(str, low + 1);
+            str = swap(str, low, i);
         }
+
     }
 
     public static String swap(String a, int i, int j) {

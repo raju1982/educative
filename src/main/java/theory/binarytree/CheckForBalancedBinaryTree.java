@@ -49,6 +49,29 @@ public class CheckForBalancedBinaryTree {
         }
     }
 
+    public static void main(String[] args){
+        Node root = new Node(10);
+        root.rightNode = new Node(8);
+        root.leftNode = new Node(7);
+        root.rightNode.rightNode = new Node(6);
+        root.rightNode.leftNode = new Node(5);
+        root.leftNode.rightNode = new Node(4);
+        root.leftNode.leftNode = new Node(3);
+
+        System.out.println(CheckForBalancedBinaryTree_fast(root).isBalanced);
+    }
+
+
+}
+
+
+
+
+
+
+/*
+
+System.out.println(CheckForBalancedBinaryTree_Slow(root));
 
     public static boolean CheckForBalancedBinaryTree_Slow(Node root){
         if(root == null){
@@ -69,20 +92,4 @@ public class CheckForBalancedBinaryTree {
 
         return Math.max(getHeight(root.leftNode) , getHeight(root.rightNode)) + 1;
     }
-
-    public static void main(String[] args){
-        Node root = new Node(10);
-        root.rightNode = new Node(8);
-        root.leftNode = new Node(7);
-        root.rightNode.rightNode = new Node(6);
-        root.rightNode.leftNode = new Node(5);
-        root.leftNode.rightNode = new Node(4);
-        root.leftNode.leftNode = new Node(3);
-
-        System.out.println(CheckForBalancedBinaryTree_Slow(root));
-
-        System.out.println(CheckForBalancedBinaryTree_fast(root).isBalanced);
-    }
-
-
-}
+ */
